@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#2a2f46', 'structural-border-subtle': '#244574', 'wallet-glass': '#122653c7', 'primary': '#baedff', 'dealer-caption': '#195d9ad9', 'on-primary': '#003642', 'inverse-surface': '#dde1ff', 'paper-light': '#f4f8ff', 'tie-slash': '#39eb82', 'secondary': '#8ed0ec', 'on-primary-container': '#005c70', 'on-tertiary-container': '#42547b', 'on-secondary': '#003545', 'primary-fixed': '#b3ebff', 'surface-container-highest': '#2f334b', 'pit-steel-deep': '#143363', 'outline-variant': '#3c494d', 'tertiary-fixed': '#d8e2ff', 'primary-fixed-dim': '#45d7fc', 'error-container': '#93000a', 'structural-border': '#579ce7', 'on-primary-fixed': '#001f27', 'surface-dim': '#0d1228', 'stage-night': '#090e1c', 'on-tertiary': '#1c3055', 'player-bead': '#75c5ff', 'on-error-container': '#ffdad6', 'surface': '#0d1228', 'surface-container-low': '#151a30', 'on-primary-fixed-variant': '#004e5f', 'outline': '#869398', 'primary-container': '#49d9ff', 'pit-steel': '#14284d', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#b4c6f4', 'tertiary-container': '#b6c9f7', 'mist-caption-soft': '#aac9e8', 'enter-ice-end': '#9cdefb', 'hero-violet': '#3222a1', 'surface-container-lowest': '#080d22', 'wallet-rim': '#345e9b', 'banker-bead': '#ef54b9', 'on-surface-variant': '#bcc9ce', 'surface-bright': '#333850', 'on-secondary-container': '#8dcfec', 'surface-container': '#191e35', 'on-tertiary-fixed-variant': '#34466d', 'badge-navy': '#134b6e', 'surface-container-high': '#242940', 'mist-caption': '#a9ccef', 'secondary-container': '#005a72', 'enter-ice-start': '#e4ffff', 'secondary-fixed': '#bbe9ff', 'on-background': '#dde1ff', 'on-secondary-fixed': '#001f29', 'on-secondary-fixed-variant': '#004d63', 'frame-navy': '#11162c', 'surface-variant': '#2f334b', 'inverse-primary': '#00677d', 'on-error': '#690005', 'on-tertiary-fixed': '#041a3f', 'surface-tint': '#45d7fc', 'background': '#0d1228', 'table-header-start': '#1d477f', 'table-header-end': '#213761', 'ice-signal': '#49d9ff', 'ice-focus': '#83e7ff', 'secondary-fixed-dim': '#8ed0ec', 'tertiary': '#dce5ff', 'on-surface': '#dde1ff', 'ice-rim': '#4fc9ff', 'enter-ink': '#053358' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '0.5rem', 'margin-mobile': '0.5rem', 'space-xs': '0.25rem', 'space-xl': '1.25rem', 'margin': '0.75rem', 'space-md': '0.75rem', 'space-xxs': '0.125rem', 'gutter-loose': '0.75rem', 'space-sm': '0.5rem', 'space-lg': '1rem', 'space-2xl': '1.75rem' }, fontFamily: { 'headline-lg': ['Outfit'], 'headline-lg-mobile': ['Outfit'], 'label-mono-lg': ['Geist Mono'], 'badge-caps': ['Outfit'], 'label-mono-sm': ['Geist Mono'], 'headline-sm': ['Outfit'], 'body-sm': ['Outfit'], 'body-md': ['Outfit'], 'label-mono-md': ['Geist Mono'], 'body-lg': ['Outfit'], 'headline-md': ['Outfit'] }, fontSize: { 'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '0.02em', fontWeight: '800' }], 'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0.02em', fontWeight: '800' }], 'label-mono-lg': ['15px', { lineHeight: '20px', letterSpacing: '-0.01em', fontWeight: '600' }], 'badge-caps': ['10px', { lineHeight: '12px', letterSpacing: '0.08em', fontWeight: '800' }], 'label-mono-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.05em', fontWeight: '500' }], 'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-sm': ['11px', { lineHeight: '16px', fontWeight: '400' }], 'body-md': ['13px', { lineHeight: '19px', fontWeight: '400' }], 'label-mono-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'body-lg': ['15px', { lineHeight: '22px', fontWeight: '500' }], 'headline-md': ['20px', { lineHeight: '26px', letterSpacing: '0.03em', fontWeight: '700' }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100dvh; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-stage-night text-on-surface flex justify-center selection:bg-ice-signal selection:text-enter-ink"><div class="w-full max-w-[430px] min-h-screen bg-frame-navy flex flex-col relative shadow-[0_0_40px_rgba(0,0,0,0.8)]"><header class="fixed top-0 max-w-[430px] w-full z-50 pt-safe bg-gradient-to-b from-[#1a315f] to-[#142146] backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="AI Live Casino Lite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTiCCyDdU4qvyY3f6294JR9BD3MQw61L_98BJ0AMbrw3SfC-OU6uMK1WdG7PAD8eRHJOEd4VItbLqbnFrung_A-H0KrQjAnVcDRMJfVIhysVdOl5Gmo9RKNpUfzai7126MrlHLXB5Z69n44vKbajgxZmdYA5v1dbmhx5rfyvbaNbmADQXUSqkxf6PYmoLEOjEsdetPsFcDZiSIuol8zCGcaOFzgfEeSQYwqjTBdFYIoXOlDDHdDOI-5kuu"/><div class="bg-wallet-glass/80 backdrop-blur-md px-space-xs py-space-xxs rounded-lg flex items-center gap-space-xs shadow-[0_0_8px_rgba(18,38,83,0.6)]"><span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-space-xxs py-0.5 rounded-DEFAULT tracking-wider">DEMO</span><span class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">5,380,461</span><span class="font-label-mono-sm text-label-mono-sm text-mist-caption">PTS</span></div></div><div class="flex items-center gap-space-xs"><span class="hidden font-headline-sm text-headline-sm uppercase text-ice-signal">Lobby</span><button aria-label="Mute Audio" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Pit Menu" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-ice-signal/20"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhlT7ILs1DeSdlHYDIFFC6Eay5y8r_evGKfwhyrfTYvdLF1BvfgRgSNTmfH6N39XGYS-dlnRE5QxvdKDotadS6Db3r_cvhE10TuEFYO6JfMioCbCR-kXba4ffpTGLA2vGvLyDvFjJEtuuugwM5W9XXyLK8FSM9KQJdHqa3ZdNn-_MiwlKzUycQFRYyrEd67XGOPT6DwruoK6my2KeOGCQbIDh7YlqupJDgKeHPyLHBDiOFqhgKDRVEg"/></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-frame-navy flex-1"><div class="flex flex-col w-full select-none">
+<!-- Featured Hero Dealer Stage -->
+<section class="relative w-full aspect-[715/351] bg-hero-violet overflow-hidden flex flex-col justify-end shadow-md">
+<div class="absolute inset-0 bg-cover bg-center mix-blend-luminosity opacity-90" data-alt="Cinematic eye-level photograph of an elegant professional female live casino dealer named Sophia in modern tailored dark navy vest smiling behind a luxury baccarat table. High roller pit studio environment with deep stage navy backlighting, soft volumetric haze, cool cyan rim lights, and sharp playing cards shoe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3ZXPexUxA2AWgiigrRlrzl2v8S1-qckzeO8k6vSHj_meaLOKJF_p6csgabjswrWGs2Fn9w9z7rCBgObuKOIogH3Oz-nO6cg_kIBFDKPKkzgLUII8pLtD45fya-qPqVuneSv58fCs6QLU-tByvEeYvFRraK32rXZucmfvkUYgcqH3IPm8pvB_hA-MfuNsXvoqrjE4EJyRjxxzaQ-q_CezYRuK2B9GS8B4SXw6pLD7Ib_pWNYAxb_dfFg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-frame-navy via-frame-navy/40 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-frame-navy/80 via-transparent to-frame-navy/30"></div>
+<!-- Dealer Nameplate Glass Chip -->
+<div class="absolute top-space-sm left-space-sm z-10">
+<div class="bg-dealer-caption/90 backdrop-blur-md px-space-xs py-0.5 rounded flex items-center gap-space-xxs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal animate-pulse"></span>
+<span class="font-headline-sm text-[11px] uppercase tracking-wider text-paper-light">Sophia</span>
+<span class="font-label-mono-sm text-mist-caption text-[9px] px-1 bg-pit-steel/60 rounded">SHOE #42</span>
+</div>
+</div>
+<!-- Hero Content Bar -->
+<div class="relative z-10 px-margin pb-space-sm flex items-end justify-between gap-space-xs">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs mb-0.5">
+<span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-space-xs py-0.5 rounded tracking-widest">FEATURED PIT</span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption tracking-normal flex items-center gap-1">
+<span class="w-1 h-1 rounded-full bg-ice-signal"></span>
+            RESULTING...
+          </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-paper-light uppercase tracking-wide truncate">Baccarat Speed N101</h2>
+<div class="flex items-center gap-space-sm text-mist-caption font-label-mono-sm text-label-mono-sm mt-0.5">
+<span>MIN 25</span>
+<span class="text-structural-border-subtle">•</span>
+<span>MAX 10,000 PTS</span>
+<span class="text-structural-border-subtle">•</span>
+<span class="text-paper-light">428 PLAYERS</span>
+</div>
+</div>
+<button class="shrink-0 bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-headline-sm uppercase px-space-md py-1.5 rounded shadow active:translate-y-px transition-all">
+        ENTER
+      </button>
+</div>
+<!-- 2px Ice Signal Underline Boundary -->
+<div class="w-full h-[2px] bg-ice-signal shadow-[0_0_8px_#49d9ff]"></div>
+</section>
+<!-- Horizontal Category Rail -->
+<section class="w-full bg-surface-container-lowest py-space-sm px-gutter overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-space-md min-w-max">
+<!-- Category 1: Lucky Numbers -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="lucky-numbers">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Macro close-up photographic view of polished gold and deep navy numbered gaming balls swirling inside a glass live studio blower with cyan accent backlighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBre6-77ArXSYU3UYS4vq8cSoP66xCjvs2C0AKjc-xrGhrJX1BaDV2remYXcAfYrQliQiT3mWJbi9EWAA65Gx1-ehVE0YHFx-7gJw2IrBSjZrIKDfCsncaUsPVZAjN8KckyFG8pcf1BGKfmEE6tXe4Gt28Wzme1i7WnZ2m1A0bE2M3blFsayOfDjtPCMSIC1iRkPP4FjlWnRC5eFMYG72WG7mn7Z39DAhywbVPflH6fw-aEROpKg5ETCQ')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Lucky Num</span>
+</button>
+<!-- Category 2: Bingo Frenzy -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="bingo-frenzy">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Stylized casino ball cage and high tech holographic neon blue bingo matrix grid inside an authentic modern live studio setup." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDN5F9A5zix3HNuDesflpT1c6QJ_keShA9TaAedjWZ3M0H4lDjIve-j8pr8foCis9WxwHGhkkCX8LpcqAQ1Ah_hbcGG77o6bFY9ODHPz8aESTbyDO7exWhFEM_Dx8ev0hJeGEuu00i7w-LEDfZu0g-s7TUT_5VaRXdyL1ltQo_DgXSW1_sVJElf_nqSYEDkj0Ws5rk7ojQZpwnUkr7JuLLVFJUBfqFoj-rg_hWlf6H0isI4ymU9ng9tzA')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Bingo Frenzy</span>
+</button>
+<!-- Category 3: Speed Frenzy -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="speed-frenzy">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="High shutter speed freeze action capture of playing cards dealing across high stakes blue baize table with dynamic icy blue trail illumination." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBo9q8QOqZ0zorv0fZZQtQsC1mjXvo1QMA_KxLV1Fpey8DK7ziCOu-L9K5qcIiqKz48xiYuHV6ESCqxY3ocQ9svtJ4NmW2BbWmRDWFTLrzoSUrWii0F8X6kpF1f0r4AK-cvsdSFaO8598ewu6wFnMSTvjkMbJ_l6sG-4kFzFU9vCRoEojhj3tORjzsc8dS7j7-VJyn6pzq3kchwTYS5TSt-XRgOwcNWBCm9S-vnO_CoTd8E_B2lFpI5xA')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Speed Pit</span>
+</button>
+<!-- Category 4: Baccarat (ACTIVE) -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="baccarat">
+<div class="w-[54px] h-[54px] rounded-full p-[2px] bg-ice-focus shadow-[0_0_10px_#49d9ff] scale-105 transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Authentic photographic close-up of a live baccarat table shoe, red lacquer card scoop, and banker player commission markers under cool tungsten studio spotlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD1CMMQVD3mLsM6U0fQ5KytI6o-vy6k2ulsBvUFBoA-wsdyWMqCvGf7MdlCLYXRFIzYuV5Z4pPHiLOp0sBTxIU7KIlMZJ-AC3M3lDWB-VYkwdy2O5r3O89_oRRkS_NZ-_-UWd0ObVDDHmRTFUeyFVxQdLT2FTDVGTCf8EL7cgFM3uWR7Ldi11rOcuN4ti4rchIa8TrkHgdMu8pT9X29pXKYw2olCRWA17S_D0hPwSo31tDe3T2q3InJ4A')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-ice-signal font-bold tracking-tight truncate max-w-[64px]">Baccarat</span>
+</button>
+<!-- Category 5: Roulette -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="roulette">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Photographic tilt-shift view of spinning solid mahogany and brass casino roulette wheel with crisp ivory ball resting on dark navy blue felt pocket." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTMm_QODIYfUvePo2wUosIpaFCXxSO1j5AxA6rXFfTQfhyUzq1Wb1YMI_XFkks-sC_04ZFgtFyZuVyeUTJKPF5CnN_9k6apkIVQCMesQX8JaFgQQvJdnLsMHKEtoDJ1cHE6F8ooOXVJ97HnHUoN9sX_11xfQd1yHwIAXX1IlhM0kKztki1fnYzKEB3NGQi_I-FEjCEtR3QwNiRiinTnrleGN-tAKDFGe40V0QYvMj76u6kNxT0RW7heA')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Roulette</span>
+</button>
+<!-- Category 6: Sic Bo -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="sic-bo">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Macro live studio shot of transparent vibration dome containing three red and white gaming dice with crystal glass reflections and navy background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATY3H0UCsklF8Ln4s4ziWMEnKqMMu0O6qlqjT__5wN8Q5zcddxyFy2cFqi6e1k0XLchyEmbjzB0t-rNIvbqovklf9tYlBpfJ44Mc945xZF3-GBZQ82ok_h8518wiLGpyp0-ofvDWcuzrlBAydAaGuaqyH13ub3ic5HgutV4nZGEJU6fi5KkuHB5TL4PRPPYtD_Imk3HOaWSUweEVOIajxE0bL3kUy77WYgCmXCRkDVxHtnF8npRPvK1g')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Sic Bo</span>
+</button>
+<!-- Category 7: Craps -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="craps">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Realistic live craps pit rail with pyramids rubber walls, vibrant dice midway through dice roll throw, high contrast casino lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpkSxfdCKegeAjxhmPgIwJW5d2N-5ujm-jTgkckAED6g18PAmlvMKSfeFuyz7YrFg3uZt1pT_v4PcsT0eH82p-omvAYwLkcGy9ih7Za17Jf1lFx9YqyNfZ8kw3kPSoOIFM4drxZTU5RMrLA1NQuK6QopS-9t-fbP8HlxayANsiWLZfw5W-AWbWGAhBDujMjh_ZYFve7E3VGAp5OQm7OPFQnX0JakUDSZUinYivP9L7BsxwkZn-HQOkTQ')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Craps</span>
+</button>
+<!-- Category 8: Blackjack -->
+<button class="flex flex-col items-center gap-1 group cursor-pointer" data-category="blackjack">
+<div class="w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Dealer hands sliding two face down cards onto deep midnight blue blackjack layout with gold foil insurance line and acrylic shoe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDevNpwS_ZVNtLl3rMWX8f21ZCE2thz3MgcKBPoap52RLFxPTK0jxOFFBPkcyveb-HobCBv9nTR5zgPQrI3rEI3vS7qA65OakjoINXBpBskTk99jejq9dP_cT3d7UooTnN6UrFk1GP73VmRUgQwdzt8Yi-jnu1nrU0V0kwV-tJbVlSGvxE4pV-9V6Y9XP52klTacd_6bR_o38JzkQ2Elk1VF5B8bjVqgTlyWcdW5yZ-g5xVs9b4VDwe7Q')">
+</div>
+</div>
+<span class="font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]">Blackjack</span>
+</button>
+</div>
+</section>
+<!-- Good Road High-Density Glance Strip -->
+<section class="w-full bg-surface-container-low px-gutter py-space-sm flex flex-col gap-1.5 shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-ice-signal text-[16px]">stacked_line_chart</span>
+<h3 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-[0.06em]">Good Road Glance</h3>
+<span class="font-badge-caps text-[9px] bg-badge-navy text-ice-signal px-1 rounded">STREAK LIVE</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-banker-bead"></span>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">B</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-player-bead"></span>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">P</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tie-slash"></span>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">T</span>
+</div>
+</div>
+</div>
+<!-- 3-up Compact Bead Matrix Strip -->
+<div class="grid grid-cols-3 gap-1.5 w-full">
+<!-- Road Tile 1: A104 -->
+<div class="bg-pit-steel p-1.5 rounded flex flex-col justify-between shadow-sm cursor-pointer hover:bg-pit-steel-deep transition-colors">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-mono-md text-label-mono-md text-paper-light">A104</span>
+<span class="font-label-mono-sm text-[10px] text-banker-bead font-semibold">B+5 RUN</span>
+</div>
+<!-- 9x5 Dot Matrix Grid -->
+<div class="grid grid-cols-9 grid-rows-5 gap-0.5 bg-surface-container-lowest p-1 rounded">
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tie-slash"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tie-slash"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-mist-caption font-label-mono-sm text-[9px]">
+<span>L: 10-5K</span>
+<span class="text-paper-light font-medium">188p</span>
+</div>
+</div>
+<!-- Road Tile 2: N301 -->
+<div class="bg-pit-steel p-1.5 rounded flex flex-col justify-between shadow-sm cursor-pointer hover:bg-pit-steel-deep transition-colors">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-mono-md text-label-mono-md text-paper-light">N301</span>
+<span class="font-label-mono-sm text-[10px] text-player-bead font-semibold">P DRAGON</span>
+</div>
+<!-- 9x5 Dot Matrix Grid -->
+<div class="grid grid-cols-9 grid-rows-5 gap-0.5 bg-surface-container-lowest p-1 rounded">
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tie-slash"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tie-slash"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-mist-caption font-label-mono-sm text-[9px]">
+<span>L: 50-25K</span>
+<span class="text-paper-light font-medium">312p</span>
+</div>
+</div>
+<!-- Road Tile 3: B202 -->
+<div class="bg-pit-steel p-1.5 rounded flex flex-col justify-between shadow-sm cursor-pointer hover:bg-pit-steel-deep transition-colors">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-mono-md text-label-mono-md text-paper-light">B202</span>
+<span class="font-label-mono-sm text-[10px] text-mist-caption font-semibold">PING PONG</span>
+</div>
+<!-- 9x5 Dot Matrix Grid -->
+<div class="grid grid-cols-9 grid-rows-5 gap-0.5 bg-surface-container-lowest p-1 rounded">
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-tie-slash"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-player-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-banker-bead"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex items-center justify-between pt-1 text-mist-caption font-label-mono-sm text-[9px]">
+<span>L: 5-1K</span>
+<span class="text-paper-light font-medium">94p</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Pit Table Catalog (2-Column Dense Grid) -->
+<section class="w-full px-gutter py-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm uppercase text-paper-light tracking-wide">Live Pit Selection</h3>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">(6 TABLES)</span>
+</div>
+<div class="flex items-center gap-1 text-ice-signal cursor-pointer">
+<span class="font-badge-caps text-badge-caps uppercase">FILTER</span>
+<span class="material-symbols-outlined text-[16px]">tune</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs w-full">
+<!-- Card 1: Baccarat Speed -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Photographic action shot of a live baccarat shoe table with dealer hands revealing cards, set in a navy luxury casino pit with glowing ice blue neon trim." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAkAv7JIa0QgC_e8x32orfYu__cA7AFmqRjiPBxG-qttBVkkx2V7PT6kvE3r-WxiHKFIbbunoy_JJZobtZXRIxgwVY8mWABZR5tbmJvuKQW9zgq-UmvxmToCQoT2zSMeBmEsgboRuNogE1NH3r01Km2o-G7MF0JWKP1vOh7W_cx5olcn3HABTB2dC5Aq-Xsaw-pIl8hEb8EKEQqX2VebQgONSlslLBHNt5fPtm0gIMYFAt_lCI3MtJqHQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal animate-pulse"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">6 LIVE</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">214 PLAY</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Speed Baccarat</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 10 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Card 2: Dragon Tiger -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Vibrant live dealer Dragon Tiger table setting with golden statues, sleek navy dealer felt, cards dealt swiftly under clear studio lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtEKCHCkM2PFhH961EugIOQCeHHEO84IYDnzTTLJL7CX7ve9Vd3zxQvJwyugX51iMSIfFTdcVNBusl_ZiRn3mE0QavkKDyOtuTzstE4j6igkLCKk77RgSMy9KrD0uaCY0dMSYRUkIrnOje2VBITjFGDL7buxvOTCnTJRI5Q34sIy01HQj0NEk0SwEvg-MFwxsHl17eiQNNSlALzDutCIkFOjhn4GGfuUgxxf9QAl42YI6YYfa15SRTwQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">3 LIVE</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">178 PLAY</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Dragon Tiger</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 20 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Card 3: Mega Roulette -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Dramatic perspective shot of a live automated roulette wheel with bright electric cyan perimeter ring, dark studio background, and multiplier display screens." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQL-BAiGUisG2ZGJ9OlGfDZYn0fclxVy6LNVLjfV8LBwGYlWQqatzvBmvn7g8cEH55-lZic14YsduYZfKY-bqUUAsks_PT6vUDpA_95jJp2gywNpUyLdiY8CDehEfXzJ_3IZj_TYmqf3ELZw7PzwYSpUbq9AO3c2WU0wSXWA3U4K8UuUBFZj5R_fXieOnxWoHP4nkhCKke1o5i-ihyOKO6u8j5qa-KMlKNrV_TMj2Y2nKjmjfEfagJZg')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tie-slash"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">500X READY</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">540 PLAY</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Mega Roulette</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 1 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Card 4: Lightning Sic Bo -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Close up photography of electronic live Sic Bo shaker apparatus with high contrast dice numbers on glowing geometric grid layout." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCt88OJPvIlfDP3xA2diTTEdx9YdO1y5f95wSLJEDlzpH63uBE6SfYhlvLKekLpor6QrlVzOIM7yzDtgvrBhNMGoxGoh0f8iaHoKie1dOtz_oASIqpyE-Ywjgp_fxggWKhnxnHk2X1kk1P3UNLlweqSU3lrDltEj98DKy3eV90oIgDHbyO4nj5eQc1rQXCLO_WdM3mjEOK3OjhikHDKtPZKfrfV9beBsbqEMoFGOYJNfP_TQzSFZsHhjQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">2 LIVE</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">89 PLAY</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Light Sic Bo</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 5 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Card 5: Speed Blackjack -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Professional casino dealer dressed in formal attire dealing swift blackjack cards to empty betting circles on a high density navy blue table." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0lVwOUdJDBqCZEXB1AG9lILMQVtNvd1VfBRmenTMG3McN03yw2Y6Vnpnrzvzadw3ggns3G7RodZgGZlHptNxRDrIZn5IuP7j-Vf4eRjmjLIYGkdmhXUkV3JwKTElK2lphoTQjeteR6wa6qGpgJOWix_KX6kwrMfT7LyJpfIA4JFjmc6oZC9f7-xqNnTR5rrj265fD9PSMobIV8p7I-ZNlyINEfyMoSNqnwTJ7XRR3dXYuCkkp3MOfXQ')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal animate-pulse"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">FAST DEAL</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">7/7 SEATS</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Speed 21 VIP</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 50 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+<!-- Card 6: Craps Studio -->
+<div class="relative aspect-[2.48] rounded bg-pit-steel overflow-hidden shadow-sm hover:brightness-105 transition-all cursor-pointer group">
+<div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-300" data-alt="Dynamic shot of mechanical craps dice launcher arm in a state of the art broadcast casino studio with navy acoustic panels and ambient blue lights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7HohjOUu6T_4HdtuF_yrDCIKquotTRnmTvj_y3pwhAaepr8GdZpsdtdPQxyAt0p5P4ErnUpx7hHuugjpeP7n92itVoSFzP3dxWqqB94ANlV9ha8_X7ZCSeysDqqx1hcgO0tQgCLhq_eGJdu2I6e-UXIAIA6v6Y0eIVFAqCLB6Rpo88bmaVXJJQvIgS0kLlCyykZTxZcQt3cDK_GpMhQR2fRu4UPdkXrVc9795UZjcQ30X1obIldoo9g')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#091224f0] via-[#09122480] to-transparent"></div>
+<div class="absolute top-1 left-1.5 z-10 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal"></span>
+<span class="font-label-mono-sm text-[8px] uppercase tracking-wider text-mist-caption">1 LIVE</span>
+</div>
+<div class="absolute top-1 right-1.5 z-10">
+<span class="font-label-mono-sm text-[8px] bg-pit-steel-deep/90 text-paper-light px-1 py-0.2 rounded font-medium">95 PLAY</span>
+</div>
+<div class="absolute bottom-1 left-1.5 right-1.5 z-10 flex items-end justify-between">
+<div class="min-w-0 pr-1">
+<h4 class="font-headline-sm text-[12px] uppercase text-paper-light tracking-tight truncate leading-tight">Craps Studio</h4>
+<span class="font-label-mono-sm text-[9px] text-mist-caption">MIN 10 PTS</span>
+</div>
+<span class="material-symbols-outlined text-ice-signal text-[16px] shrink-0 group-hover:translate-x-0.5 transition-transform">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Cockpit Quick Status Banner -->
+<section class="w-full px-gutter pb-space-sm pt-space-xs">
+<div class="bg-pit-steel/60 p-space-xs rounded flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-2 h-2 rounded-full bg-tie-slash"></div>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">STUDIO LATENCY:</span>
+<span class="font-label-mono-sm text-label-mono-sm text-paper-light font-semibold">18ms (SYNCHRONIZED)</span>
+</div>
+<span class="font-badge-caps text-[9px] text-ice-signal tracking-wider uppercase">HQ FEED</span>
+</div>
+</section>
+</div>
+<script>
+  (function() {
+    // Micro-interactions for category selection
+    const categoryButtons = document.querySelectorAll('[data-category]');
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          const wrapper = b.querySelector('div');
+          const label = b.querySelector('span');
+          wrapper.className = 'w-[52px] h-[52px] rounded-full p-[2px] bg-surface-variant group-hover:bg-structural-border transition-all flex items-center justify-center overflow-hidden';
+          label.className = 'font-headline-sm text-[11px] text-on-surface-variant group-hover:text-paper-light tracking-tight truncate max-w-[64px]';
+        });
+        const activeWrapper = btn.querySelector('div');
+        const activeLabel = btn.querySelector('span');
+        activeWrapper.className = 'w-[54px] h-[54px] rounded-full p-[2px] bg-ice-focus shadow-[0_0_10px_#49d9ff] scale-105 transition-all flex items-center justify-center overflow-hidden';
+        activeLabel.className = 'font-headline-sm text-[11px] text-ice-signal font-bold tracking-tight truncate max-w-[64px]';
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 max-w-[430px] w-full z-50 pb-safe bg-pit-steel/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(4,10,24,0.7)]" data-active-classes="text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 transition-colors text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40" data-path="lobby" href="#"><span class="material-symbols-outlined text-[22px]">casino</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Lobby</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="category-tables" href="#"><span class="material-symbols-outlined text-[22px]">view_comfy</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Tables</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="roadmap" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Roadmap</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">History</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Account</span></a></div></nav></div></body></html>

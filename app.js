@@ -3,14 +3,14 @@
 
   const BALANCE = "5,380,461";
   const categories = [
-    { id: "lucky-numbers", name: "LUCKY NUMBERS", image: "lucky-numbers.webp" },
-    { id: "bingo-frenzy", name: "BINGO FRENZY", image: "bingo-frenzy.webp" },
-    { id: "speed-frenzy", name: "SPEED FRENZY", image: "speed-frenzy.webp" },
-    { id: "baccarat", name: "BACCARAT", image: "baccarat.webp" },
-    { id: "roulette", name: "ROULETTE", image: "roulette.webp" },
-    { id: "sic-bo", name: "SIC BO", image: "sic-bo.webp" },
-    { id: "craps", name: "CRAPS", image: "craps.webp", synthetic: true },
-    { id: "blackjack", name: "BLACKJACK", image: "blackjack.webp", synthetic: true }
+    { id: "lucky-numbers", name: "LUCKY NUMBERS", short: "Lucky Num", image: "lucky-numbers.webp" },
+    { id: "bingo-frenzy", name: "BINGO FRENZY", short: "Bingo", image: "bingo-frenzy.webp" },
+    { id: "speed-frenzy", name: "SPEED FRENZY", short: "Speed Pit", image: "speed-frenzy.webp" },
+    { id: "baccarat", name: "BACCARAT", short: "Baccarat", image: "baccarat.webp" },
+    { id: "roulette", name: "ROULETTE", short: "Roulette", image: "roulette.webp" },
+    { id: "sic-bo", name: "SIC BO", short: "Sic Bo", image: "sic-bo.webp" },
+    { id: "craps", name: "CRAPS", short: "Craps", image: "craps.webp", synthetic: true },
+    { id: "blackjack", name: "BLACKJACK", short: "Blackjack", image: "blackjack.webp", synthetic: true }
   ];
 
   const tables = {
@@ -59,7 +59,7 @@
 
   const messages = {
     en: {
-      language: "Language", profile: "Profile", about: "About demo", lobby: "Lobby", goodRoad: "GOOD ROAD",
+      language: "Language", profile: "Profile", about: "About demo", lobby: "Lobby", goodRoad: "GOOD ROAD GLANCE",
       level: "Level", dealer: "Dealer", allLevels: "All levels", beginner: "Beginner", royal: "Royal",
       allDealers: "All dealers", tableLimit: "TABLE LIMIT", resulting: "Resulting...", enter: "ENTER",
       demo: "DEMO", back: "Back", table: "Table", limit: "Table limit", mode: "Mode",
@@ -68,7 +68,9 @@
       nickname: "Nickname", balance: "Balance", demoPlayer: "Demo Player", localBalance: "The demo balance is fixed and does not connect to a casino account.",
       aboutText: "This offline lobby is a visual demo based on the supplied screenshots. Tables and roadmaps use illustrative data. No bets or live games are available.",
       refreshText: "Demo balance is fixed at 5,380,461.", home: "Go to lobby", openMenu: "Open menu", closeMenu: "Close menu", openProfile: "Open profile",
-      refreshBalance: "Refresh demo balance", open: "Open", close: "Close", games: "Games", scrollLeft: "Scroll games left", scrollRight: "Scroll games right", heroLabel: "AI Live Casino dealer on a neon stage", artwork: "game artwork"
+      refreshBalance: "Refresh demo balance", open: "Open", close: "Close", games: "Games", scrollLeft: "Scroll games left", scrollRight: "Scroll games right",
+      heroLabel: "AI Live Casino dealer on a neon stage", artwork: "game artwork", featured: "FEATURED PIT", livePit: "LIVE PIT SELECTION",
+      tablesCount: "8 TABLES", limits: "Limits", pts: "PTS", type: "Type"
     },
     zh: {
       language: "语言", profile: "个人资料", about: "关于演示", lobby: "大厅", goodRoad: "好路推荐",
@@ -80,7 +82,9 @@
       nickname: "昵称", balance: "余额", demoPlayer: "演示玩家", localBalance: "演示余额固定，不连接赌场账户。",
       aboutText: "这个离线大厅根据提供的截图制作。桌台及路单使用演示数据，不提供下注或实时游戏。",
       refreshText: "演示余额固定为 5,380,461。", home: "返回大厅", openMenu: "打开菜单", closeMenu: "关闭菜单", openProfile: "打开个人资料",
-      refreshBalance: "刷新演示余额", open: "打开", close: "关闭", games: "游戏分类", scrollLeft: "向左滚动游戏", scrollRight: "向右滚动游戏", heroLabel: "霓虹舞台上的 AI Live Casino 荷官", artwork: "游戏图片"
+      refreshBalance: "刷新演示余额", open: "打开", close: "关闭", games: "游戏分类", scrollLeft: "向左滚动游戏", scrollRight: "向右滚动游戏",
+      heroLabel: "霓虹舞台上的 AI Live Casino 荷官", artwork: "游戏图片", featured: "精选赌台", livePit: "现场桌台",
+      tablesCount: "8 张桌台", limits: "限额", pts: "PTS", type: "类型"
     }
   };
 
@@ -97,6 +101,7 @@
   const t = key => messages[state.language][key];
   const categoryById = id => categories.find(item => item.id === id);
   const image = name => `assets/${name}`;
+  const chartIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>';
 
   function roadDots(seed, columns, rows) {
     const dots = [];
@@ -105,28 +110,53 @@
       for (let row = 1; row <= count; row += 1) {
         const banker = (seed + column * 3 + row) % 3 !== 0;
         const tie = (seed + column + row * 2) % 13 === 0;
-        dots.push(`<i class="road-dot${tie ? " tie" : ""}" style="grid-column:${column};grid-row:${row};--dot:${banker ? "#ef54b9" : "#75c5ff"}" aria-hidden="true"></i>`);
+        const color = tie ? null : banker ? "#ef54b9" : "#75c5ff";
+        dots.push(`<i class="road-dot${tie ? " tie" : ""}" style="grid-column:${column};grid-row:${row};${color ? `--dot:${color}` : ""}" aria-hidden="true"></i>`);
       }
     }
     return dots.join("");
   }
 
+  function catButtons(activeId, className) {
+    return categories.map(item => `<button class="${className}" type="button" data-nav="category/${item.id}" ${item.id === activeId ? 'aria-current="page"' : ""} aria-label="${t("open")} ${item.name}"><img src="${image(item.image)}" alt="" /><span>${item.short}</span></button>`).join("");
+  }
+
   function renderLobby() {
     const roadIds = ["A104", "A116", "A318"];
+    const featured = tables.baccarat[0];
     view.innerHTML = `
       <div class="lobby-view">
-        <div class="hero" role="img" aria-label="${t("heroLabel")}"></div>
-        <section class="road-section" aria-label="${t("goodRoad")}">
-          <h1 class="road-title">♦ ${t("goodRoad")} ♦</h1>
-          <div class="road-row">
-            ${roadIds.map((id, index) => `<button class="road-card" type="button" data-nav="table/baccarat/${id}" aria-label="${t("open")} Baccarat ${id}"><span class="road-card-title">BACCARAT ${id}</span><span class="road-grid">${roadDots(index + 2, 9, 5)}</span></button>`).join("")}
-          </div>
-        </section>
-        <div class="game-grid-scroll">
-          <div class="game-grid">
-            ${categories.map(item => `<button class="game-card${item.synthetic ? " synthetic" : ""}" type="button" data-nav="category/${item.id}" aria-label="${t("open")} ${item.name}"><img src="${image(item.image)}" alt="" />${item.synthetic ? `<span class="synthetic-label">${item.name}</span>` : ""}</button>`).join("")}
+        <div class="hero" role="img" aria-label="${t("heroLabel")}">
+          <div class="hero-chip"><span class="live-dot" aria-hidden="true"></span>${featured.dealer}</div>
+          <div class="hero-bar">
+            <div class="hero-copy">
+              <div class="hero-meta"><span class="badge">${t("featured")}</span><span class="status-word">${t("resulting")}</span></div>
+              <h1>Baccarat ${featured.id}</h1>
+              <div class="hero-limits"><span>${featured.limit} ${t("pts")}</span></div>
+            </div>
+            <button class="enter-button" type="button" data-nav="table/baccarat/${featured.id}">${t("enter")}</button>
           </div>
         </div>
+        <div class="hero-edge"></div>
+        <div class="lobby-rail">${catButtons("baccarat", "cat-tab")}</div>
+        <section class="road-section" aria-label="${t("goodRoad")}">
+          <div class="road-head">
+            <h2 class="road-title">${chartIcon}${t("goodRoad")}</h2>
+            <div class="legend"><span><i class="b"></i>B</span><span><i class="p"></i>P</span><span><i class="t"></i>T</span></div>
+          </div>
+          <div class="road-row">
+            ${roadIds.map((id, index) => {
+              const table = tables.baccarat.find(item => item.id === id);
+              return `<button class="road-card" type="button" data-nav="table/baccarat/${id}" aria-label="${t("open")} Baccarat ${id}"><span class="road-card-title">${id}<em>${t("demo")}</em></span><span class="road-grid">${roadDots(index + 2, 9, 5)}</span><span class="road-foot"><span>${table.limit}</span><span>${table.dealer}</span></span></button>`;
+            }).join("")}
+          </div>
+        </section>
+        <section class="pit-section">
+          <div class="pit-head"><h2>${t("livePit")}</h2><span>${t("tablesCount")}</span></div>
+          <div class="game-grid">
+            ${categories.map(item => `<button class="game-card${item.synthetic ? " synthetic" : ""}" type="button" data-nav="category/${item.id}" aria-label="${t("open")} ${item.name}"><img src="${image(item.image)}" alt="" />${item.synthetic ? `<span class="synthetic-label">${item.name}</span>` : ""}<span class="game-copy">${t("demo")}</span></button>`).join("")}
+          </div>
+        </section>
       </div>`;
   }
 
@@ -135,10 +165,10 @@
       ? `<div class="mini-road" aria-hidden="true">${roadDots(index + 5, 12, 5)}</div>`
       : `<div class="table-art"><img src="${image(category.image)}" alt="" /></div>`;
     return `<article class="table-card">
-      <div class="table-heading"><strong>${item.id}</strong><span>${t("tableLimit")}: ${item.limit}</span><span class="resulting">${t("resulting")}</span></div>
+      <div class="table-heading">${category.short} <strong>${item.id}</strong><span class="resulting">${t("resulting")}</span></div>
       <div class="table-body">
         <div class="dealer-tile"><img src="${image("hero.webp")}" alt="" /><span>${item.dealer}</span></div>
-        <div class="table-info">${art}<div class="table-actions"><span class="demo-tag">● ${t("demo")}</span><button class="enter-button" type="button" data-nav="table/${category.id}/${item.id}" aria-label="${t("enter")} ${category.name} ${item.id}">${t("enter")}</button></div></div>
+        <div class="table-info">${art}<div class="table-actions"><span class="limit-stack"><small>${t("limits")}</small><b>${item.limit}</b></span><button class="enter-button" type="button" data-nav="table/${category.id}/${item.id}" aria-label="${t("enter")} ${category.name} ${item.id}">${t("enter")}</button></div></div>
       </div>
     </article>`;
   }
@@ -158,8 +188,8 @@
     const strip = view.querySelector(".category-strip");
     if (!strip) return;
     const maxScroll = Math.max(0, strip.scrollWidth - strip.clientWidth);
-    view.querySelector('.category-arrow--left').disabled = strip.scrollLeft <= 2;
-    view.querySelector('.category-arrow--right').disabled = strip.scrollLeft >= maxScroll - 2;
+    view.querySelector(".category-arrow--left").disabled = strip.scrollLeft <= 2;
+    view.querySelector(".category-arrow--right").disabled = strip.scrollLeft >= maxScroll - 2;
   }
 
   function renderCategory(category) {
@@ -169,7 +199,7 @@
       <div class="category-rail">
         <button class="category-arrow category-arrow--left" type="button" data-scroll="left" aria-label="${t("scrollLeft")}" aria-controls="categoryStrip"><span class="arrow-chevron" aria-hidden="true"></span></button>
         <nav class="category-strip" id="categoryStrip" aria-label="${t("games")}">
-          ${categories.map(item => `<button class="category-tab" type="button" data-nav="category/${item.id}" ${item.id === category.id ? 'aria-current="page"' : ""} aria-label="${item.name}"><img src="${image(item.image)}" alt="" /><span>${item.name}</span></button>`).join("")}
+          ${catButtons(category.id, "category-tab")}
         </nav>
         <button class="category-arrow category-arrow--right" type="button" data-scroll="right" aria-label="${t("scrollRight")}" aria-controls="categoryStrip"><span class="arrow-chevron" aria-hidden="true"></span></button>
       </div>
@@ -210,14 +240,12 @@
     if (section === "category" && category) {
       renderCategory(category);
       pageTitle = category.name;
-    }
-    else if (section === "table" && category) {
+    } else if (section === "table" && category) {
       const table = tables[category.id].find(item => item.id === parts[2]);
       if (table) {
         renderDetail(category, table);
         pageTitle = `${category.name} ${table.id}`;
-      }
-      else renderLobby();
+      } else renderLobby();
     } else renderLobby();
     document.title = `${pageTitle} · AI Live Casino Lite`;
     updateStaticLabels();
@@ -254,7 +282,7 @@
       body = `<img class="modal-avatar" src="${image("avatar.webp")}" alt="" /><div class="profile-row"><span>${t("nickname")}</span><strong>${t("demoPlayer")}</strong></div><div class="profile-row"><span>${t("balance")}</span><strong>${BALANCE}</strong></div><p>${t("localBalance")}</p>`;
     } else if (kind === "language") {
       title = t("language");
-      body = `<div class="language-options"><button type="button" data-language="en" aria-pressed="${state.language === "en"}"><span>🇺🇸 English</span><span>${state.language === "en" ? "✓" : ""}</span></button><button type="button" data-language="zh" aria-pressed="${state.language === "zh"}"><span>🇨🇳 简体中文</span><span>${state.language === "zh" ? "✓" : ""}</span></button></div>`;
+      body = `<div class="language-options"><button type="button" data-language="en" aria-pressed="${state.language === "en"}"><span>English</span><span>${state.language === "en" ? "✓" : ""}</span></button><button type="button" data-language="zh" aria-pressed="${state.language === "zh"}"><span>简体中文</span><span>${state.language === "zh" ? "✓" : ""}</span></button></div>`;
     } else {
       title = t("about");
       body = `<p>${t("aboutText")}</p>`;
@@ -271,7 +299,7 @@
     toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
   }
 
-  view.addEventListener("click", event => {
+  function handleViewClick(event) {
     const scrollButton = event.target.closest("[data-scroll]");
     if (scrollButton) {
       const strip = view.querySelector(".category-strip");
@@ -293,7 +321,10 @@
       state.dealer = "all";
       renderCategory(categoryById(state.category));
     }
-  });
+  }
+
+  view.addEventListener("click", handleViewClick);
+  document.getElementById("homeButton")?.addEventListener("click", () => navigate("lobby"));
 
   view.addEventListener("change", event => {
     if (event.target.id === "levelFilter") state.level = event.target.value;

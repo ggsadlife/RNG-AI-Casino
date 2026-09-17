@@ -1,0 +1,27 @@
+[
+  {
+    "slug": "design-md",
+    "screenId": "10672995975350482177",
+    "error": "Request contains an invalid argument."
+  },
+  {
+    "slug": "design-system",
+    "screenId": "asset-stub-assets_7a9a84546dc24bb2898cfd77a7aee623",
+    "error": "Request contains an invalid argument."
+  },
+  {
+    "slug": "logo",
+    "screenId": "6818640015f5425b88224d61bfd881bf",
+    "error": "Request contains an invalid argument."
+  },
+  {
+    "slug": "lobby",
+    "screenId": "5e223eda4c9748478a17e0573483c8c7",
+    "error": "Request contains an invalid argument."
+  },
+  {
+    "slug": "baccarat-tables",
+    "screenId": "13c3ae1d4f974bb58ea0167d9068a2a4",
+    "error": "Request contains an invalid argument."
+  }
+]

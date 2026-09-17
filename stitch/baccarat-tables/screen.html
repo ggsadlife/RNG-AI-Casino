@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#2a2f46', 'structural-border-subtle': '#244574', 'wallet-glass': '#122653c7', 'primary': '#baedff', 'dealer-caption': '#195d9ad9', 'on-primary': '#003642', 'inverse-surface': '#dde1ff', 'paper-light': '#f4f8ff', 'tie-slash': '#39eb82', 'secondary': '#8ed0ec', 'on-primary-container': '#005c70', 'on-tertiary-container': '#42547b', 'on-secondary': '#003545', 'primary-fixed': '#b3ebff', 'surface-container-highest': '#2f334b', 'pit-steel-deep': '#143363', 'outline-variant': '#3c494d', 'tertiary-fixed': '#d8e2ff', 'primary-fixed-dim': '#45d7fc', 'error-container': '#93000a', 'structural-border': '#579ce7', 'on-primary-fixed': '#001f27', 'surface-dim': '#0d1228', 'stage-night': '#090e1c', 'on-tertiary': '#1c3055', 'player-bead': '#75c5ff', 'on-error-container': '#ffdad6', 'surface': '#0d1228', 'surface-container-low': '#151a30', 'on-primary-fixed-variant': '#004e5f', 'outline': '#869398', 'primary-container': '#49d9ff', 'pit-steel': '#14284d', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#b4c6f4', 'tertiary-container': '#b6c9f7', 'mist-caption-soft': '#aac9e8', 'enter-ice-end': '#9cdefb', 'hero-violet': '#3222a1', 'surface-container-lowest': '#080d22', 'wallet-rim': '#345e9b', 'banker-bead': '#ef54b9', 'on-surface-variant': '#bcc9ce', 'surface-bright': '#333850', 'on-secondary-container': '#8dcfec', 'surface-container': '#191e35', 'on-tertiary-fixed-variant': '#34466d', 'badge-navy': '#134b6e', 'surface-container-high': '#242940', 'mist-caption': '#a9ccef', 'secondary-container': '#005a72', 'enter-ice-start': '#e4ffff', 'secondary-fixed': '#bbe9ff', 'on-background': '#dde1ff', 'on-secondary-fixed': '#001f29', 'on-secondary-fixed-variant': '#004d63', 'frame-navy': '#11162c', 'surface-variant': '#2f334b', 'inverse-primary': '#00677d', 'on-error': '#690005', 'on-tertiary-fixed': '#041a3f', 'surface-tint': '#45d7fc', 'background': '#0d1228', 'table-header-start': '#1d477f', 'table-header-end': '#213761', 'ice-signal': '#49d9ff', 'ice-focus': '#83e7ff', 'secondary-fixed-dim': '#8ed0ec', 'tertiary': '#dce5ff', 'on-surface': '#dde1ff', 'ice-rim': '#4fc9ff', 'enter-ink': '#053358' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '0.5rem', 'margin-mobile': '0.5rem', 'space-xs': '0.25rem', 'space-xl': '1.25rem', 'margin': '0.75rem', 'space-md': '0.75rem', 'space-xxs': '0.125rem', 'gutter-loose': '0.75rem', 'space-sm': '0.5rem', 'space-lg': '1rem', 'space-2xl': '1.75rem' }, fontFamily: { 'headline-lg': ['Outfit'], 'headline-lg-mobile': ['Outfit'], 'label-mono-lg': ['Geist Mono'], 'badge-caps': ['Outfit'], 'label-mono-sm': ['Geist Mono'], 'headline-sm': ['Outfit'], 'body-sm': ['Outfit'], 'body-md': ['Outfit'], 'label-mono-md': ['Geist Mono'], 'body-lg': ['Outfit'], 'headline-md': ['Outfit'] }, fontSize: { 'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '0.02em', fontWeight: '800' }], 'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0.02em', fontWeight: '800' }], 'label-mono-lg': ['15px', { lineHeight: '20px', letterSpacing: '-0.01em', fontWeight: '600' }], 'badge-caps': ['10px', { lineHeight: '12px', letterSpacing: '0.08em', fontWeight: '800' }], 'label-mono-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.05em', fontWeight: '500' }], 'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-sm': ['11px', { lineHeight: '16px', fontWeight: '400' }], 'body-md': ['13px', { lineHeight: '19px', fontWeight: '400' }], 'label-mono-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'body-lg': ['15px', { lineHeight: '22px', fontWeight: '500' }], 'headline-md': ['20px', { lineHeight: '26px', letterSpacing: '0.03em', fontWeight: '700' }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100dvh; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-stage-night text-on-surface flex justify-center selection:bg-ice-signal selection:text-enter-ink"><div class="w-full max-w-[430px] min-h-screen bg-frame-navy flex flex-col relative shadow-[0_0_40px_rgba(0,0,0,0.8)]"><header class="fixed top-0 max-w-[430px] w-full z-50 pt-safe bg-gradient-to-b from-[#1a315f] to-[#142146] backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="AI Live Casino Lite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTiCCyDdU4qvyY3f6294JR9BD3MQw61L_98BJ0AMbrw3SfC-OU6uMK1WdG7PAD8eRHJOEd4VItbLqbnFrung_A-H0KrQjAnVcDRMJfVIhysVdOl5Gmo9RKNpUfzai7126MrlHLXB5Z69n44vKbajgxZmdYA5v1dbmhx5rfyvbaNbmADQXUSqkxf6PYmoLEOjEsdetPsFcDZiSIuol8zCGcaOFzgfEeSQYwqjTBdFYIoXOlDDHdDOI-5kuu"/><div class="bg-wallet-glass/80 backdrop-blur-md px-space-xs py-space-xxs rounded-lg flex items-center gap-space-xs shadow-[0_0_8px_rgba(18,38,83,0.6)]"><span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-space-xxs py-0.5 rounded-DEFAULT tracking-wider">DEMO</span><span class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">5,380,461</span><span class="font-label-mono-sm text-label-mono-sm text-mist-caption">PTS</span></div></div><div class="flex items-center gap-space-xs"><span class="hidden font-headline-sm text-headline-sm uppercase text-ice-signal">Category Tables</span><button aria-label="Mute Audio" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Pit Menu" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-ice-signal/20"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhlT7ILs1DeSdlHYDIFFC6Eay5y8r_evGKfwhyrfTYvdLF1BvfgRgSNTmfH6N39XGYS-dlnRE5QxvdKDotadS6Db3r_cvhE10TuEFYO6JfMioCbCR-kXba4ffpTGLA2vGvLyDvFjJEtuuugwM5W9XXyLK8FSM9KQJdHqa3ZdNn-_MiwlKzUycQFRYyrEd67XGOPT6DwruoK6my2KeOGCQbIDh7YlqupJDgKeHPyLHBDiOFqhgKDRVEg"/></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-frame-navy flex-1"><div class="flex flex-col w-full">
+<section class="w-full bg-surface-container-lowest/80 backdrop-blur-md py-space-xs px-gutter">
+<div class="flex items-center gap-space-sm overflow-x-auto no-scrollbar py-space-xxs" id="categoryRail">
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group focus:outline-none" data-cat="baccarat">
+<div class="w-12 h-12 rounded-full p-0.5 bg-gradient-to-b from-enter-ice-start via-ice-signal to-secondary shadow-[0_0_12px_rgba(73,217,255,0.45)] scale-105 transition-transform">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Close-up cinematic luxury live dealer dealing cards on an emerald navy felt baccarat table under cool studio ice-blue rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJs35_SkkCWCI9oY7jmv25CHkwDCzkItnwNINylxHJgrrMNIwMwQHhncR76GQa74gfTUK__VAeHzYD_S_JdrfBhUhy3xG4q-Yzxv6_K9SeKwG9kPu_onaI8_cWRsrQLsZ8pFjK-lF6qhkbO_TofAvTqPwnDskTNrI-VGxzBauXMyNvMyHA0uJeX7QUtDjA43Tzs_ZMeonI-loFTt6l9FKFtB0Q3XAud_PnXQHmnIYKh-hPzW_dRrsWAg"/>
+</div>
+</div>
+<span class="font-headline-sm text-[11px] leading-tight tracking-wider uppercase text-ice-signal font-semibold">Baccarat</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="speed">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="High tempo golden roulette wheel spinning dynamically in an elite dark studio with electric neon cyan motion blur streaks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAetVJyy0RqZvv9VkgtdZw38WQo7dhZOQ-E5CRTeHvwHI7ZNgNg21LmMrucRvRLQAAheWXaKx9Si9-y7-oBSWaxP2ZTUrfOL-3KkwzanpDtZiy_IxPHlUbT2CbSCF8XoJmZnuqaN0dc8xJNwhvbOYfj3LreKR3kR49-pq9pP5nvm0QPZQfdreTTCAP_p0UCwZmL8Qt_T-tkPvlzZXKRHCQ5AY8pMZYrYIbjwKH8-M9xKn_t8MxDEFG1fw"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Speed</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="roulette">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Precision milled mahogany roulette wheel with polished brass turret and white ivory ball resting on double zero under sapphire studio lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQJ22lBWi5uwbNpRk3Pz0NVsom5A-qQTiWfXNa0m12hPewj_iQ7iAD2GdCJEd_8KYOjDIk32wdxBbuI8LYKJ4G34K2ZGEN2PlbjoQUN9hQzRNiyyucY733RvFhiG730vY9OvNZHnIgFUpHTKHgyrZN3UXLbXDnGy4sE9lzOB0sIIgeo0gzlmArphtdJ0mx3tvqiEl0vZ2Tg_llsL1n_URVgwxzcXRV7B1RbdVysPM51Ron54L_gmDh7A"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Roulette</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="blackjack">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Blackjack felt table with dealt ace of spades and king of diamonds live dealer cards in velvet tray with glossy chips" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqZ-75ARJj25nR8g1ekwD2IOPKJyOsLb2il2drKwgmblPvstOQLKvZJbHDeZEGnVjrirA8L416QNbXjVS00x_lwHi15Y8kDZGbOxT0neyNKbNOWCv8k41nNmZUTK0PDfmLRYt6qenlQ1eGDS50U2HttNlgcuZcNplubSQPBAPs9zK39mWXfoN6RHDHBFaGHcENb2XS91PDEB0KaHMaqThoytgTQjOCBsAMp5nIoNz9cEsx7snGFLC2fA"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Blackjack</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="lucky">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Futuristic live gaming studio display panel radiating bright gold and electric blue numbered multiplier tiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPxaqJLfKcZ8afnFGCPsF5VIDHoOnBOM12QWWqXxV-xhwJZT1DAwYBhERaWIzqChniHSjFB4xKVx8n7my3vpQ6GbiIuOrP4wK40RJ8xEmo6w0YIW-KE5yq2dUegjBD_kkFxQfrC6Mnm0s8Ff2267Ybq0AzrgqtZJQBkEVGkGqde8o14DEP2CVGhvOfzgQfk7m3GXkVvDpd3XOuFWU7ajdrsgOZTPkoVH1S61dN3ToOj_g7u4DhExwj6w"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Lucky No.</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="sicbo">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Transparent automated glass dice shaker dome vibrating with three crimson dice under focused dark casino stage spotlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfZkDhx85Ix0DOPF8HGgEHFEaqaes9aX7qqfmA4urGHTmQrIODnFYRUCtfLz7Kxz5hEKM410qOP6eJWa2GXnb0ZT6NCbiIC4TZUCvI0mnRUg5RbtMgoU45nNo3rwJAHU6UfnRdaiv8lZ3tOIGavpwSM2HRDJGdqdBBLyOTu4zHpzszusV4tU3j9fy96NvhmQOvdWYt9IJzWqHzAn8bYyZ0PbYpKnJ63_mgYxeGdg9uF_TDkQOXiTHmsw"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Sic Bo</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="craps">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Dark wooden live craps table layout showing field propositions and pass line with red dice bouncing on textured diamond back wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrC04KYo9dCDts3bsD3JjsD5nKGpf6-5KzzzfQQLEegIAgCWE2PAzYe2WFm-hTdfU9bWbgsgjjCN0-A0CPvyHHZeGg40oJ7mih3hXVM8chr8w6fZ5LQZjUEdQB3un5fQcCTuhPxDy69AqW8TAqsQ5783FZh4r38Tra_Ry3Z5_oHsnEEvgCtLow4oEnw-6NiCuj1SG5B1xlcF4hWHYpoDwoekGG-cWNmdqjgFiWir6ld2tZEZydlRlz8Q"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Craps</span>
+</button>
+<button class="flex flex-col items-center gap-space-xxs flex-shrink-0 group opacity-75 hover:opacity-100 transition-opacity focus:outline-none" data-cat="bingo">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Polished acrylic spherical bingo blower chamber whirling vibrant numbered balls in an ultramodern blue glass casino chamber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2clrJgg7IhH4Y6dElFHYJPr4_MYsKJG0YSxBudFhB23K4NRIACgUREveqVDVDlKyluL5bNm6j1VofU2A1dfSc3GHpujzkpef-g9MLvtPVAKia5TZ7ApG8FHD6Rehd9sTncVE1tqAAS79H3kgcV3jjAlS1_-muGL28K9OSnCi7Q67EpjqEDMLOHviaCIXQnJBm44JxkrTsWze8j6RMAhsiZYZCLYcGO3nHCCwQofhGtdJcOCse4QRyOg"/>
+</div>
+</div>
+<span class="font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]">Bingo</span>
+</button>
+</div>
+</section>
+<div class="w-full px-gutter py-space-xs flex items-center justify-between gap-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs flex-1 min-w-0">
+<button aria-label="Filter Table Type" class="flex items-center gap-space-xxs px-space-sm py-1 rounded bg-[#243d70] text-paper-light shadow-[inset_0_1px_0_rgba(94,154,219,0.4)] active:scale-95 transition-transform">
+<span class="font-headline-sm text-[10px] uppercase text-mist-caption font-semibold tracking-wider">Type:</span>
+<span class="font-headline-sm text-[11px] text-paper-light font-bold truncate">All Speed</span>
+<span class="material-symbols-outlined text-[14px] text-ice-signal">arrow_drop_down</span>
+</button>
+<button aria-label="Filter Limits" class="flex items-center gap-space-xxs px-space-sm py-1 rounded bg-[#243d70] text-paper-light shadow-[inset_0_1px_0_rgba(94,154,219,0.4)] active:scale-95 transition-transform">
+<span class="font-headline-sm text-[10px] uppercase text-mist-caption font-semibold tracking-wider">Limits:</span>
+<span class="font-label-mono-sm text-[11px] text-paper-light font-semibold truncate">$1K - $2M</span>
+<span class="material-symbols-outlined text-[14px] text-ice-signal">tune</span>
+</button>
+</div>
+<div class="flex items-center gap-1 bg-pit-steel px-space-xs py-1 rounded">
+<span class="w-2 h-2 rounded-full bg-tie-slash animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-paper-light font-bold">18 LIVE</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm px-gutter py-space-xs w-full pb-6">
+<!-- Card 1: Baccarat Speed A104 -->
+<article class="w-full rounded-xl overflow-hidden bg-gradient-to-b from-pit-steel to-pit-steel-deep shadow-[0_4px_16px_rgba(2,9,25,0.7)] flex flex-col">
+<header class="h-8 px-space-sm bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal"></span>
+<h2 class="font-headline-sm text-[13px] uppercase text-paper-light font-bold tracking-wide truncate">Speed Baccarat</h2>
+<span class="font-label-mono-sm text-[11px] text-mist-caption bg-frame-navy/50 px-1 py-0.5 rounded">A104</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-1 py-0.5 rounded tracking-wider">SHOE 42</span>
+<span class="font-label-mono-sm text-[10px] text-tie-slash font-semibold bg-surface-container-lowest/70 px-1.5 py-0.5 rounded">BETS OPEN (12s)</span>
+</div>
+</header>
+<div class="flex p-space-xs gap-space-xs h-[104px]">
+<div class="w-[26%] h-full relative rounded-lg overflow-hidden bg-frame-navy flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of live casino dealer Sophia with sleek dark hair smiling professionally in elegant midnight navy uniform at high roller baccarat pit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-oYndWZLUO-UqWPj484pMBx7MI_w_Ht5X4fJWrsQkl5KO3mknE7wIyqSnThARdcCH4Skc8_DWRUUkl34mzHvVwWAWOkP1ivAjBgrIk29IrIzn09d_TThDFGxVsE4OzSfE_CWoo4cgXf0OsiM-JS4x9Z5iGLL7n-FPH2ojSzCSXFKWUpTsOeiAKGbWqpZd-ql5jnHVIcWcjwVE406tZmg7wtzQ3Xa__pSldGaFQqbyWKyUfusM1Ejz9g"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-headline-sm text-[10px] uppercase text-paper-light tracking-wider font-bold">Sophia</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div class="w-full bg-surface-container-lowest/90 rounded p-1 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-mono-sm text-[9px] text-mist-caption px-0.5">
+<span>BEAD ROAD</span>
+<div class="flex items-center gap-2">
+<span class="text-player-bead">P: 24</span>
+<span class="text-banker-bead">B: 26</span>
+<span class="text-tie-slash">T: 4</span>
+</div>
+</div>
+<!-- 12x5 bead matrix -->
+<div class="grid grid-cols-12 grid-rows-5 gap-0.5 w-full h-[38px] p-0.5 bg-pit-steel rounded">
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[9px] uppercase text-mist-caption leading-none">Limits</span>
+<span class="font-label-mono-sm text-[12px] text-paper-light font-semibold tracking-tight">$1,000 – $500,000</span>
+</div>
+<button class="px-space-md py-1.5 rounded-[4px] bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-[12px] font-extrabold uppercase tracking-wider shadow-[0_2px_8px_rgba(73,217,255,0.4)] active:scale-95 transition-all">
+              ENTER
+            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2: No Commission Baccarat N301 -->
+<article class="w-full rounded-xl overflow-hidden bg-gradient-to-b from-pit-steel to-pit-steel-deep shadow-[0_4px_16px_rgba(2,9,25,0.7)] flex flex-col">
+<header class="h-8 px-space-sm bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-player-bead"></span>
+<h2 class="font-headline-sm text-[13px] uppercase text-paper-light font-bold tracking-wide truncate">No Commission</h2>
+<span class="font-label-mono-sm text-[11px] text-mist-caption bg-frame-navy/50 px-1 py-0.5 rounded">N301</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-1 py-0.5 rounded tracking-wider">SHOE 18</span>
+<span class="font-label-mono-sm text-[10px] text-mist-caption-soft font-semibold bg-surface-container-lowest/70 px-1.5 py-0.5 rounded">SHUFFLING</span>
+</div>
+</header>
+<div class="flex p-space-xs gap-space-xs h-[104px]">
+<div class="w-[26%] h-full relative rounded-lg overflow-hidden bg-frame-navy flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of live dealer Amelia with blond hair tied back in refined casino posture by sapphire-accented baccarat dealing shoe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMsqmji7-AixY003Kr0S0Czu2pXv5VVcvoKQ5OEvSeeElyw6wbAu8knNOqfVgDfIcEPLUS6F3wNbs6ZWr2OFqPJjdXTqIcO5fcO9LQmaEnJk0b9D1Zh0egYHyv5XI6hCXQHjwPHkxJn4R87sFIYudVd9D7DK7ETbf5YbFmZnFHIPO1WP2cfzeRvP_o-2KubaQjNbmlWho2XMb35w4wV91voYhh17ViAFp-LUx7MsI18Q02HaB-w4EQkg"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-headline-sm text-[10px] uppercase text-paper-light tracking-wider font-bold">Amelia</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div class="w-full bg-surface-container-lowest/90 rounded p-1 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-mono-sm text-[9px] text-mist-caption px-0.5">
+<span>BEAD ROAD</span>
+<div class="flex items-center gap-2">
+<span class="text-player-bead">P: 31</span>
+<span class="text-banker-bead">B: 29</span>
+<span class="text-tie-slash">T: 7</span>
+</div>
+</div>
+<!-- 12x5 bead matrix -->
+<div class="grid grid-cols-12 grid-rows-5 gap-0.5 w-full h-[38px] p-0.5 bg-pit-steel rounded">
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[9px] uppercase text-mist-caption leading-none">Limits</span>
+<span class="font-label-mono-sm text-[12px] text-paper-light font-semibold tracking-tight">$5,000 – $2,000,000</span>
+</div>
+<button class="px-space-md py-1.5 rounded-[4px] bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-[12px] font-extrabold uppercase tracking-wider shadow-[0_2px_8px_rgba(73,217,255,0.4)] active:scale-95 transition-all">
+              ENTER
+            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 3: VIP Speed Baccarat B202 -->
+<article class="w-full rounded-xl overflow-hidden bg-gradient-to-b from-pit-steel to-pit-steel-deep shadow-[0_4px_16px_rgba(2,9,25,0.7)] flex flex-col">
+<header class="h-8 px-space-sm bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<h2 class="font-headline-sm text-[13px] uppercase text-paper-light font-bold tracking-wide truncate">VIP Speed Baccarat</h2>
+<span class="font-label-mono-sm text-[11px] text-mist-caption bg-frame-navy/50 px-1 py-0.5 rounded">B202</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-1 py-0.5 rounded tracking-wider">SHOE 64</span>
+<span class="font-label-mono-sm text-[10px] text-ice-signal font-semibold bg-surface-container-lowest/70 px-1.5 py-0.5 rounded">DEALING</span>
+</div>
+</header>
+<div class="flex p-space-xs gap-space-xs h-[104px]">
+<div class="w-[26%] h-full relative rounded-lg overflow-hidden bg-frame-navy flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of live dealer Grace in tailored dark blue velvet vest holding gold baccarat card palette against cinematic VIP backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv6C4cNzYxFOGZDT0Ergj_LVNlDCgFlBOchRnzOdBGE9UtaYgD3jNjiTE3s3emYwhOiyQ1uPTHs2EquN7sYz4xjQ2lvSnaG9KdIUz6I2PalduwyUMdXm91X2Pd7m1zvS3WVajqxMJpRTVUlIyWZAdrpiJ32HQGHgz8OxCtCkuOkIzOlTcOTkTi655SPO7QdCEjjLI3yk1rBi6rsuYeNOteaaidhZabrEdMPNv27NmBllQhIvf1xbll0w"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-headline-sm text-[10px] uppercase text-paper-light tracking-wider font-bold">Grace</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div class="w-full bg-surface-container-lowest/90 rounded p-1 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-mono-sm text-[9px] text-mist-caption px-0.5">
+<span>BEAD ROAD</span>
+<div class="flex items-center gap-2">
+<span class="text-player-bead">P: 19</span>
+<span class="text-banker-bead">B: 35</span>
+<span class="text-tie-slash">T: 3</span>
+</div>
+</div>
+<!-- 12x5 bead matrix -->
+<div class="grid grid-cols-12 grid-rows-5 gap-0.5 w-full h-[38px] p-0.5 bg-pit-steel rounded">
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[9px] uppercase text-mist-caption leading-none">Limits</span>
+<span class="font-label-mono-sm text-[12px] text-paper-light font-semibold tracking-tight">$10,000 – $1,000,000</span>
+</div>
+<button class="px-space-md py-1.5 rounded-[4px] bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-[12px] font-extrabold uppercase tracking-wider shadow-[0_2px_8px_rgba(73,217,255,0.4)] active:scale-95 transition-all">
+              ENTER
+            </button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 4: Lightning Baccarat L105 -->
+<article class="w-full rounded-xl overflow-hidden bg-gradient-to-b from-pit-steel to-pit-steel-deep shadow-[0_4px_16px_rgba(2,9,25,0.7)] flex flex-col">
+<header class="h-8 px-space-sm bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center gap-space-xs min-w-0">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-focus animate-ping"></span>
+<h2 class="font-headline-sm text-[13px] uppercase text-paper-light font-bold tracking-wide truncate">Lightning Baccarat</h2>
+<span class="font-label-mono-sm text-[11px] text-mist-caption bg-frame-navy/50 px-1 py-0.5 rounded">L105</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-1 py-0.5 rounded tracking-wider">SHOE 09</span>
+<span class="font-label-mono-sm text-[10px] text-tie-slash font-semibold bg-surface-container-lowest/70 px-1.5 py-0.5 rounded">BETS OPEN (8s)</span>
+</div>
+</header>
+<div class="flex p-space-xs gap-space-xs h-[104px]">
+<div class="w-[26%] h-full relative rounded-lg overflow-hidden bg-frame-navy flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of live dealer Betty poised at modern electro-themed baccarat table framed in metallic cyan art-deco lighting fixtures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMvC-l7hjy22F6G3xF5fYw1T0Q8wjf70veaR95p2ZZGBCXXlQeF9OvDAGSy1b2RACPpJqFEyyU80ecWBktxrKu9msHPk6BoyJGNZsUsqaLKMUcGzyJCy7Ucc2sMX723Rko74C5tdqihBmabFwIZroVehPAfU4m87qbMQ869eo-JjvIaNAEsR81u-tXA3fk7gD7RhZ91RXpF9GW5UGqL_lef0QeHxIhxblQSfd-B4yM07gwaNyICawJrg"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-headline-sm text-[10px] uppercase text-paper-light tracking-wider font-bold">Betty</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div class="w-full bg-surface-container-lowest/90 rounded p-1 flex flex-col gap-1">
+<div class="flex items-center justify-between font-label-mono-sm text-[9px] text-mist-caption px-0.5">
+<span>BEAD ROAD</span>
+<div class="flex items-center gap-2">
+<span class="text-player-bead">P: 21</span>
+<span class="text-banker-bead">B: 23</span>
+<span class="text-tie-slash">T: 5</span>
+</div>
+</div>
+<!-- 12x5 bead matrix -->
+<div class="grid grid-cols-12 grid-rows-5 gap-0.5 w-full h-[38px] p-0.5 bg-pit-steel rounded">
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-tie-slash flex items-center justify-center text-[7px] font-bold text-frame-navy">T</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-player-bead flex items-center justify-center text-[7px] font-bold text-frame-navy">P</span>
+<span class="rounded-full bg-banker-bead flex items-center justify-center text-[7px] font-bold text-paper-light">B</span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+<span class="rounded-full bg-surface-container-high"></span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex flex-col">
+<span class="font-body-sm text-[9px] uppercase text-mist-caption leading-none">Limits</span>
+<span class="font-label-mono-sm text-[12px] text-paper-light font-semibold tracking-tight">$2,000 – $750,000</span>
+</div>
+<button class="px-space-md py-1.5 rounded-[4px] bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-[12px] font-extrabold uppercase tracking-wider shadow-[0_2px_8px_rgba(73,217,255,0.4)] active:scale-95 transition-all">
+              ENTER
+            </button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<script>
+    (() => {
+      const rail = document.getElementById('categoryRail');
+      if (rail) {
+        rail.addEventListener('click', (e) => {
+          const btn = e.target.closest('button[data-cat]');
+          if (!btn) return;
+          rail.querySelectorAll('button[data-cat]').forEach(b => {
+            const wrap = b.querySelector('div');
+            const label = b.querySelector('span');
+            if (b === btn) {
+              b.classList.remove('opacity-75');
+              wrap.className = 'w-12 h-12 rounded-full p-0.5 bg-gradient-to-b from-enter-ice-start via-ice-signal to-secondary shadow-[0_0_12px_rgba(73,217,255,0.45)] scale-105 transition-transform';
+              label.className = 'font-headline-sm text-[11px] leading-tight tracking-wider uppercase text-ice-signal font-semibold';
+            } else {
+              b.classList.add('opacity-75');
+              wrap.className = 'w-12 h-12 rounded-full p-0.5 bg-pit-steel-deep';
+              label.className = 'font-body-sm text-[11px] leading-tight uppercase text-mist-caption truncate max-w-[56px]';
+            }
+          });
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 max-w-[430px] w-full z-50 pb-safe bg-pit-steel/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(4,10,24,0.7)]" data-active-classes="text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="lobby" href="#"><span class="material-symbols-outlined text-[22px]">casino</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Lobby</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 transition-colors text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40" data-path="category-tables" href="#"><span class="material-symbols-outlined text-[22px]">view_comfy</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Tables</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="roadmap" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Roadmap</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">History</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Account</span></a></div></nav></div></body></html>

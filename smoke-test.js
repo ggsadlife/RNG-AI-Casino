@@ -65,6 +65,8 @@ assert(elements.view.innerHTML.includes("lobby-view"));
 assert(document.title.includes("Lobby"));
 assert((elements.view.innerHTML.match(/class="game-card/g) || []).length === 8);
 assert((elements.view.innerHTML.match(/class="road-card"/g) || []).length === 3);
+assert(elements.view.innerHTML.includes("LIVE PIT SELECTION"));
+assert(elements.view.innerHTML.includes("cat-tab"));
 
 function clickView(nav, action, scrollDirection) {
   elements.view.listeners.click({ target: { closest(selector) {
@@ -123,5 +125,6 @@ elements.modal.listeners.click({ target: { closest(selector) {
 assert(document.documentElement.lang === "zh-CN");
 assert(elements.view.innerHTML.includes("好路推荐"));
 assert(document.title.includes("大厅"));
+assert(elements.view.innerHTML.includes("现场桌台"));
 
 console.log("Smoke test passed: category arrows, no footer, lobby, all categories, filters, table preview, menu home, profile, language.");
