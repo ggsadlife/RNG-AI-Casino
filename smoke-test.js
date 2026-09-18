@@ -14,6 +14,7 @@ class Element {
     this.scrollLeft = 0;
     this.scrollWidth = id === "categoryStrip" ? 900 : 0;
     this.clientWidth = id === "categoryStrip" ? 350 : 0;
+    this.muted = id === "heroVideo";
     this.classList = { add() {}, remove() {} };
   }
   addEventListener(name, callback) { this.listeners[name] = callback; }
@@ -22,6 +23,7 @@ class Element {
   contains() { return false; }
   showModal() { this.open = true; }
   close() { this.open = false; this.listeners.close?.(); }
+  play() { return Promise.resolve(); }
   scrollBy({ left }) {
     this.scrollLeft = Math.max(0, Math.min(this.scrollWidth - this.clientWidth, this.scrollLeft + left));
     this.listeners.scroll?.();
@@ -35,11 +37,13 @@ class Element {
     if (selector === ".category-arrow--left") return elements.leftArrow;
     if (selector === ".category-arrow--right") return elements.rightArrow;
     if (selector === ".modal-close") return { focus() {} };
+    if (selector === ".hero-video") return elements.heroVideo;
+    if (selector === ".hero-sound") return elements.heroSound;
     return null;
   }
 }
 
-const ids = ["view", "menuButton", "menuPanel", "modal", "modalContent", "toast", "profileButton", "refreshButton", "balanceText", "tableList", "levelFilter", "dealerFilter", "categoryStrip", "leftArrow", "rightArrow"];
+const ids = ["view", "menuButton", "menuPanel", "modal", "modalContent", "toast", "profileButton", "refreshButton", "balanceText", "tableList", "levelFilter", "dealerFilter", "categoryStrip", "leftArrow", "rightArrow", "heroVideo", "heroSound"];
 const elements = Object.fromEntries(ids.map(id => [id, new Element(id)]));
 const documentListeners = {};
 const windowListeners = {};
@@ -62,6 +66,13 @@ const context = { document, window, location, setTimeout, clearTimeout, console 
 vm.runInNewContext(fs.readFileSync("app.js", "utf8"), context, { filename: "app.js" });
 assert(!fs.readFileSync("index.html", "utf8").includes('class="bottom-bar"'));
 assert(elements.view.innerHTML.includes("lobby-view"));
+assert(elements.view.innerHTML.includes('<video class="hero-video" autoplay muted loop playsinline'));
+assert(elements.view.innerHTML.includes('src="assets/dealer-welcome-alpha.webm" type="video/webm"'));
+assert(elements.view.innerHTML.includes('poster="assets/dealer-poster.webp"'));
+assert(elements.view.innerHTML.includes('data-action="toggle-sound"'));
+for (const file of ["dealer-welcome-alpha.webm", "dealer-poster.webp", "hero-stage.webp"]) {
+  assert(fs.statSync(`assets/${file}`).size > 0);
+}
 assert(document.title.includes("Lobby"));
 assert((elements.view.innerHTML.match(/class="game-card/g) || []).length === 8);
 assert((elements.view.innerHTML.match(/class="road-card"/g) || []).length === 3);
@@ -73,9 +84,18 @@ function clickView(nav, action, scrollDirection) {
     if (selector === "[data-scroll]") return scrollDirection ? { dataset: { scroll: scrollDirection } } : null;
     if (selector === "[data-nav]") return nav ? { dataset: { nav } } : null;
     if (selector === '[data-action="clear-filters"]') return action === "clear-filters" ? {} : null;
+    if (selector === '[data-action="toggle-sound"]') return action === "toggle-sound" ? {} : null;
     return null;
   } } });
 }
+
+clickView(null, "toggle-sound");
+assert(!elements.heroVideo.muted);
+assert(elements.heroSound.attrs["aria-pressed"] === "true");
+assert(elements.heroSound.attrs["aria-label"] === "Turn sound off");
+clickView(null, "toggle-sound");
+assert(elements.heroVideo.muted);
+assert(elements.heroSound.attrs["aria-pressed"] === "false");
 
 for (const category of ["lucky-numbers", "bingo-frenzy", "speed-frenzy", "baccarat", "roulette", "sic-bo", "craps", "blackjack"]) {
   clickView(`category/${category}`);
@@ -127,4 +147,4 @@ assert(elements.view.innerHTML.includes("好路推荐"));
 assert(document.title.includes("大厅"));
 assert(elements.view.innerHTML.includes("现场桌台"));
 
-console.log("Smoke test passed: category arrows, no footer, lobby, all categories, filters, table preview, menu home, profile, language.");
+console.log("Smoke test passed: lobby video sound toggle, category arrows, no footer, all categories, filters, table preview, menu home, profile, language.");

@@ -70,7 +70,8 @@
       refreshText: "Demo balance is fixed at 5,380,461.", home: "Go to lobby", openMenu: "Open menu", closeMenu: "Close menu", openProfile: "Open profile",
       refreshBalance: "Refresh demo balance", open: "Open", close: "Close", games: "Games", scrollLeft: "Scroll games left", scrollRight: "Scroll games right",
       heroLabel: "AI Live Casino dealer on a neon stage", artwork: "game artwork", featured: "FEATURED PIT", livePit: "LIVE PIT SELECTION",
-      tablesCount: "8 TABLES", limits: "Limits", pts: "PTS", type: "Type"
+      tablesCount: "8 TABLES", limits: "Limits", pts: "PTS", type: "Type",
+      soundOn: "Turn sound on", soundOff: "Turn sound off", soundUnavailable: "Sound could not start. Try again."
     },
     zh: {
       language: "语言", profile: "个人资料", about: "关于演示", lobby: "大厅", goodRoad: "好路推荐",
@@ -84,7 +85,8 @@
       refreshText: "演示余额固定为 5,380,461。", home: "返回大厅", openMenu: "打开菜单", closeMenu: "关闭菜单", openProfile: "打开个人资料",
       refreshBalance: "刷新演示余额", open: "打开", close: "关闭", games: "游戏分类", scrollLeft: "向左滚动游戏", scrollRight: "向右滚动游戏",
       heroLabel: "霓虹舞台上的 AI Live Casino 荷官", artwork: "游戏图片", featured: "精选赌台", livePit: "现场桌台",
-      tablesCount: "8 张桌台", limits: "限额", pts: "PTS", type: "类型"
+      tablesCount: "8 张桌台", limits: "限额", pts: "PTS", type: "类型",
+      soundOn: "开启声音", soundOff: "关闭声音", soundUnavailable: "无法播放声音，请重试。"
     }
   };
 
@@ -126,8 +128,14 @@
     const featured = tables.baccarat[0];
     view.innerHTML = `
       <div class="lobby-view">
-        <div class="hero" role="img" aria-label="${t("heroLabel")}">
+        <div class="hero">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="${image("dealer-poster.webp")}" aria-hidden="true" tabindex="-1">
+            <source src="${image("dealer-welcome-alpha.webm")}" type="video/webm" />
+          </video>
           <div class="hero-chip"><span class="live-dot" aria-hidden="true"></span>${featured.dealer}</div>
+          <button class="hero-sound" type="button" data-action="toggle-sound" aria-label="${t("soundOn")}" aria-pressed="false" title="${t("soundOn")}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="sound-wave" d="M16 8c2 2 2 6 0 8m2-11c4 4 4 10 0 14"/><path class="sound-slash" d="m17 9 5 6m0-6-5 6"/></svg>
+          </button>
           <div class="hero-bar">
             <div class="hero-copy">
               <div class="hero-meta"><span class="badge">${t("featured")}</span><span class="status-word">${t("resulting")}</span></div>
@@ -300,6 +308,24 @@
   }
 
   function handleViewClick(event) {
+    if (event.target.closest('[data-action="toggle-sound"]')) {
+      const video = view.querySelector(".hero-video");
+      const button = view.querySelector(".hero-sound");
+      if (!video || !button) return;
+      video.muted = !video.muted;
+      const updateButton = () => {
+        button.setAttribute("aria-pressed", String(!video.muted));
+        button.setAttribute("aria-label", t(video.muted ? "soundOn" : "soundOff"));
+        button.title = t(video.muted ? "soundOn" : "soundOff");
+      };
+      updateButton();
+      if (!video.muted) video.play()?.catch(() => {
+        video.muted = true;
+        updateButton();
+        showToast(t("soundUnavailable"));
+      });
+      return;
+    }
     const scrollButton = event.target.closest("[data-scroll]");
     if (scrollButton) {
       const strip = view.querySelector(".category-strip");
