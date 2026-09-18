@@ -72,8 +72,7 @@
       refreshBalance: "Refresh demo balance", open: "Open", close: "Close", games: "Games", scrollLeft: "Scroll games left", scrollRight: "Scroll games right",
       heroLabel: "AI Live Casino dealer on a neon stage", artwork: "game artwork", featured: "FEATURED PIT", livePit: "LIVE PIT SELECTION",
       tablesCount: "8 TABLES", limits: "Limits", pts: "PTS", type: "Type",
-      soundOn: "Turn sound on", soundOff: "Turn sound off", soundUnavailable: "Sound could not start. Try again."
-      tablesCount: "8 TABLES", limits: "Limits", pts: "PTS", type: "Type",
+      soundOn: "Turn sound on", soundOff: "Turn sound off", soundUnavailable: "Sound could not start. Try again.",
       tables: "TABLES", lastPockets: "Pocket history", lastRoll: "Latest roll", lastResults: "Last results",
       lastDraws: "Last draws", callCard: "Call card", upCards: "Up cards", sum: "Sum", total: "Total"
     },
@@ -91,8 +90,7 @@
       refreshBalance: "刷新演示余额", open: "打开", close: "关闭", games: "游戏分类", scrollLeft: "向左滚动游戏", scrollRight: "向右滚动游戏",
       heroLabel: "霓虹舞台上的 AI Live Casino 荷官", artwork: "游戏图片", featured: "精选赌台", livePit: "现场桌台",
       tablesCount: "8 张桌台", limits: "限额", pts: "PTS", type: "类型",
-      soundOn: "开启声音", soundOff: "关闭声音", soundUnavailable: "无法播放声音，请重试。"
-      tablesCount: "8 张桌台", limits: "限额", pts: "PTS", type: "类型",
+      soundOn: "开启声音", soundOff: "关闭声音", soundUnavailable: "无法播放声音，请重试。",
       tables: "张桌台", lastPockets: "号码记录", lastRoll: "最近一骰", lastResults: "最近结果",
       lastDraws: "最近开奖", callCard: "开奖卡", upCards: "明牌", sum: "和值", total: "合计"
     }
