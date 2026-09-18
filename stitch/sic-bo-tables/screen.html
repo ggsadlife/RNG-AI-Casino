@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#2a2f46', 'structural-border-subtle': '#244574', 'wallet-glass': '#122653c7', 'primary': '#baedff', 'dealer-caption': '#195d9ad9', 'on-primary': '#003642', 'inverse-surface': '#dde1ff', 'paper-light': '#f4f8ff', 'tie-slash': '#39eb82', 'secondary': '#8ed0ec', 'on-primary-container': '#005c70', 'on-tertiary-container': '#42547b', 'on-secondary': '#003545', 'primary-fixed': '#b3ebff', 'surface-container-highest': '#2f334b', 'pit-steel-deep': '#143363', 'outline-variant': '#3c494d', 'tertiary-fixed': '#d8e2ff', 'primary-fixed-dim': '#45d7fc', 'error-container': '#93000a', 'structural-border': '#579ce7', 'on-primary-fixed': '#001f27', 'surface-dim': '#0d1228', 'stage-night': '#090e1c', 'on-tertiary': '#1c3055', 'player-bead': '#75c5ff', 'on-error-container': '#ffdad6', 'surface': '#0d1228', 'surface-container-low': '#151a30', 'on-primary-fixed-variant': '#004e5f', 'outline': '#869398', 'primary-container': '#49d9ff', 'pit-steel': '#14284d', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#b4c6f4', 'tertiary-container': '#b6c9f7', 'mist-caption-soft': '#aac9e8', 'enter-ice-end': '#9cdefb', 'hero-violet': '#3222a1', 'surface-container-lowest': '#080d22', 'wallet-rim': '#345e9b', 'banker-bead': '#ef54b9', 'on-surface-variant': '#bcc9ce', 'surface-bright': '#333850', 'on-secondary-container': '#8dcfec', 'surface-container': '#191e35', 'on-tertiary-fixed-variant': '#34466d', 'badge-navy': '#134b6e', 'surface-container-high': '#242940', 'mist-caption': '#a9ccef', 'secondary-container': '#005a72', 'enter-ice-start': '#e4ffff', 'secondary-fixed': '#bbe9ff', 'on-background': '#dde1ff', 'on-secondary-fixed': '#001f29', 'on-secondary-fixed-variant': '#004d63', 'frame-navy': '#11162c', 'surface-variant': '#2f334b', 'inverse-primary': '#00677d', 'on-error': '#690005', 'on-tertiary-fixed': '#041a3f', 'surface-tint': '#45d7fc', 'background': '#0d1228', 'table-header-start': '#1d477f', 'table-header-end': '#213761', 'ice-signal': '#49d9ff', 'ice-focus': '#83e7ff', 'secondary-fixed-dim': '#8ed0ec', 'tertiary': '#dce5ff', 'on-surface': '#dde1ff', 'ice-rim': '#4fc9ff', 'enter-ink': '#053358' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '0.5rem', 'margin-mobile': '0.5rem', 'space-xs': '0.25rem', 'space-xl': '1.25rem', 'margin': '0.75rem', 'space-md': '0.75rem', 'space-xxs': '0.125rem', 'gutter-loose': '0.75rem', 'space-sm': '0.5rem', 'space-lg': '1rem', 'space-2xl': '1.75rem' }, fontFamily: { 'headline-lg': ['Outfit'], 'headline-lg-mobile': ['Outfit'], 'label-mono-lg': ['Geist Mono'], 'badge-caps': ['Outfit'], 'label-mono-sm': ['Geist Mono'], 'headline-sm': ['Outfit'], 'body-sm': ['Outfit'], 'body-md': ['Outfit'], 'label-mono-md': ['Geist Mono'], 'body-lg': ['Outfit'], 'headline-md': ['Outfit'] }, fontSize: { 'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '0.02em', fontWeight: '800' }], 'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0.02em', fontWeight: '800' }], 'label-mono-lg': ['15px', { lineHeight: '20px', letterSpacing: '-0.01em', fontWeight: '600' }], 'badge-caps': ['10px', { lineHeight: '12px', letterSpacing: '0.08em', fontWeight: '800' }], 'label-mono-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.05em', fontWeight: '500' }], 'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-sm': ['11px', { lineHeight: '16px', fontWeight: '400' }], 'body-md': ['13px', { lineHeight: '19px', fontWeight: '400' }], 'label-mono-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'body-lg': ['15px', { lineHeight: '22px', fontWeight: '500' }], 'headline-md': ['20px', { lineHeight: '26px', letterSpacing: '0.03em', fontWeight: '700' }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100dvh; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-stage-night text-on-surface flex justify-center selection:bg-ice-signal selection:text-enter-ink"><div class="w-full max-w-[430px] min-h-screen bg-frame-navy flex flex-col relative shadow-[0_0_40px_rgba(0,0,0,0.8)]"><header class="fixed top-0 max-w-[430px] w-full z-50 pt-safe bg-gradient-to-b from-[#1a315f] to-[#142146] backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="AI Live Casino Lite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTiCCyDdU4qvyY3f6294JR9BD3MQw61L_98BJ0AMbrw3SfC-OU6uMK1WdG7PAD8eRHJOEd4VItbLqbnFrung_A-H0KrQjAnVcDRMJfVIhysVdOl5Gmo9RKNpUfzai7126MrlHLXB5Z69n44vKbajgxZmdYA5v1dbmhx5rfyvbaNbmADQXUSqkxf6PYmoLEOjEsdetPsFcDZiSIuol8zCGcaOFzgfEeSQYwqjTBdFYIoXOlDDHdDOI-5kuu"/><div class="bg-wallet-glass/80 backdrop-blur-md px-space-xs py-space-xxs rounded-lg flex items-center gap-space-xs shadow-[0_0_8px_rgba(18,38,83,0.6)]"><span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-space-xxs py-0.5 rounded-DEFAULT tracking-wider">DEMO</span><span class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">5,380,461</span><span class="font-label-mono-sm text-label-mono-sm text-mist-caption">PTS</span></div></div><div class="flex items-center gap-space-xs"><span class="hidden font-headline-sm text-headline-sm uppercase text-ice-signal">Lobby</span><button aria-label="Mute Audio" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Pit Menu" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-ice-signal/20"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhlT7ILs1DeSdlHYDIFFC6Eay5y8r_evGKfwhyrfTYvdLF1BvfgRgSNTmfH6N39XGYS-dlnRE5QxvdKDotadS6Db3r_cvhE10TuEFYO6JfMioCbCR-kXba4ffpTGLA2vGvLyDvFjJEtuuugwM5W9XXyLK8FSM9KQJdHqa3ZdNn-_MiwlKzUycQFRYyrEd67XGOPT6DwruoK6my2KeOGCQbIDh7YlqupJDgKeHPyLHBDiOFqhgKDRVEg"/></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-frame-navy flex-1"><div class="flex flex-col w-full pb-6 select-none">
+<!-- CATEGORY RAIL -->
+<section class="w-full pt-2 pb-3 overflow-x-auto scrollbar-none flex items-center gap-space-md px-margin bg-surface-container-lowest/80 backdrop-blur-md border-b border-structural-border-subtle/50">
+<!-- Sic Bo (Active) -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 focus:outline-none group" type="button">
+<div class="relative w-12 h-12 rounded-full p-0.5 border-2 border-ice-signal shadow-[0_0_12px_rgba(73,217,255,0.45)] scale-105 bg-surface-container-high transition-transform duration-200">
+<img class="w-full h-full object-cover rounded-full" data-alt="High precision photorealistic Sic Bo game token with sleek frosted cobalt glass and engraved minimalist geometric ivory dots on deep navy studio backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBtiYrAGsNwyKxjWO1XBwZuLNHYgFTeNvpJbwVhEuIc82KBFnFzkL9ki990aaIIA99vtrGXDy2NSI38MPrN5jTDlmg8BAWKpIHHmlLHZECO2-NVq3RhaBD2ltrPTEvylhy5y4rkTgehaC_j7N-nRsrtPsINjsWiiZIS2Cy4bdYocXfI9b-N6SkDA-mdmmkA6WmlAnk_j8b5aFdl4d2spWg171e3b50vsN78gEBE47FMxQv70fEBfg5Dg"/>
+<div class="absolute inset-0 rounded-full ring-1 ring-inset ring-ice-focus/40"></div>
+</div>
+<span class="font-headline-sm text-label-mono-sm text-ice-signal font-semibold uppercase tracking-wider">Sic Bo</span>
+</button>
+<!-- Baccarat -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full p-0.5 border border-structural-border/40 bg-surface-container-high">
+<img class="w-full h-full object-cover rounded-full" data-alt="Baccarat luxury casino card squeeze visual on deep midnight navy stage with cold cyan illumination and tactile textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCukdybwCrPyhUmqpaZb8g8QAN9vRzNtZWKc4M8rom_3fR3m9u5T0E0X0WWNeLjdboUAAc-dA4jaSOIDzyBVMfeFpyG9x7t9cScitUVS_m_KXi2L5Cbw6fmsarQ9PyGRasqavuwpTMBCRHvP5a0187_9wXupWpz-aIFdvUpZIGzsRjRQ3qXPmzI36mPZtbnWie4x4t6GQ4miVs0IO1KWYK5fmEAjvUVZcV7gjbKNNiYBWqgVKN5D6mI8g"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium tracking-normal">Baccarat</span>
+</button>
+<!-- Speed Frenzy -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full p-0.5 border border-structural-border/40 bg-surface-container-high">
+<img class="w-full h-full object-cover rounded-full" data-alt="Rapid-pace casino table game token illuminated with subtle cyan optical trails across a brushed dark steel felt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhVlsbmkYOTfCDB8-pPfvza-7qx2ob0p0pCduvWrQdiZlQ2j96LGANRmCZ8aDv4ad7VypSkcukTCh_t3sgZCxUWE4-1-gGmQacpmmAA_hPvbBZ0CewFsagyEHq3e9cHLBOHix5FSZrGqVzZIEkzstlIgMETTNep2j6ljimayKZ7lDnaa95ELZEEW3i24jl9JFAJqcRX1_x9bzrMUh3bLV2NvMW4EQo_6Ey5CaS8dVSKlAkiar9qG-CRw"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium tracking-normal">Speed</span>
+</button>
+<!-- Roulette -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full p-0.5 border border-structural-border/40 bg-surface-container-high">
+<img class="w-full h-full object-cover rounded-full" data-alt="Dark steel live roulette wheel with deep blue pocket reflections and polished metallic ball track close-up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACk-VcNaN8WCyuQv35wE_rkXIdUqw5qIZ2g9c0GmiiONK8PY_5QaYpqg2c0UHh4v98ogjwNAKAjIt2tlYaZF8SDRbxjS5u59Hq1g5IfDMnPwuQvGzVQIb6IoQTimRG9KIWIjSb3YPGdAKkk74PeWp7In8aS5WsKT2XZnqH8UNK-vL5oI7anpLUW5zXCViAIDRPTwXD115FN9Mmuwb8AixTsBArNaQUGkzdxKhiENSFLzJMTEDO-IQXvA"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium tracking-normal">Roulette</span>
+</button>
+<!-- Blackjack -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full p-0.5 border border-structural-border/40 bg-surface-container-high">
+<img class="w-full h-full object-cover rounded-full" data-alt="Blackjack card shoe in a darkened professional casino pit studio with deep navy felt and sharp ambient rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzqdnx1H5ybkMfPQ_snNHo6ooGNhVanAh6HYNr9wmxJBjWWWxVeWi8WqhbsYv_rwMiq0l9J-EVT60HD0URJTgCS5q_Xn5y6os7DLU-Uay2gxjcAkQ1t1WdMj7D2pK0Z7OljAY_AknTEQ2Pam9cIgxV6fjD3g6InmGWAo-TgNb97mT8s3qjl-UBcHQB2AGvc2l_p_L9xnXiGHfhSTVkkkUKfxAtgIYuK07-O9-DzDSeyoEqtWlFGv7O9g"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium tracking-normal">Blackjack</span>
+</button>
+<!-- Craps -->
+<button class="flex flex-col items-center gap-1.5 shrink-0 opacity-70 hover:opacity-100 transition-opacity focus:outline-none" type="button">
+<div class="w-12 h-12 rounded-full p-0.5 border border-structural-border/40 bg-surface-container-high">
+<img class="w-full h-full object-cover rounded-full" data-alt="Craps pit arena with dark blue leather armrest padding and precision geometric dice resting on navy velvet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeTDSHm-DNK-j9q4sLXhLh6FMWhBGQJ_z4MY4hNGrXFeWPVhB51ADGTsTt7QedzcyS-D9mwZPTVhb-e6qXMa1SY2t506l2TCE-awap7COscoxPP0jaqUC9_HwTLMlL8ePWX_c5xVqsIIRDazZiEfSiEGjgTV8YnrNTiUbRgPr8zteciYRAW5x9AzKf_EoA-Q-XUkOW0-CZczm10Whn-oVHrk_qYJuib5nuU6v0DqjCm-KuLNx8smMOig"/>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium tracking-normal">Craps</span>
+</button>
+</section>
+<!-- PIT HEADER & LIVE STATUS -->
+<section class="px-margin pt-3 pb-2 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-paper-light tracking-tight">Sic Bo Pit</h1>
+<div class="flex items-center gap-1 bg-badge-navy border border-ice-signal/60 px-1.5 py-0.5 rounded">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal animate-pulse"></span>
+<span class="font-badge-caps text-badge-caps text-ice-signal uppercase">3 TABLES LIVE</span>
+</div>
+</div>
+<button aria-label="Sort Pit" class="w-8 h-8 rounded flex items-center justify-center bg-surface-container border border-structural-border-subtle text-mist-caption hover:text-ice-signal transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+<!-- COMPACT FILTER PILLS -->
+<div class="flex flex-col gap-1.5">
+<!-- Tier Filter -->
+<div class="flex items-center gap-1 overflow-x-auto scrollbar-none py-0.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase mr-1">TIER</span>
+<button class="tier-pill active px-2.5 py-1 rounded bg-table-header-start border border-ice-signal text-ice-signal font-badge-caps text-badge-caps tracking-wider transition-all" type="button">ALL</button>
+<button class="tier-pill px-2.5 py-1 rounded bg-surface-container border border-structural-border-subtle text-mist-caption font-badge-caps text-badge-caps tracking-wider hover:border-structural-border transition-all" type="button">BEGINNER</button>
+<button class="tier-pill px-2.5 py-1 rounded bg-surface-container border border-structural-border-subtle text-mist-caption font-badge-caps text-badge-caps tracking-wider hover:border-structural-border transition-all" type="button">ROYAL</button>
+</div>
+<!-- Dealer Filter -->
+<div class="flex items-center gap-1 overflow-x-auto scrollbar-none py-0.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase mr-1">HOST</span>
+<button class="host-pill active px-2 py-0.5 rounded bg-pit-steel-deep border border-ice-signal/70 text-ice-signal font-label-mono-sm text-label-mono-sm uppercase transition-all" type="button">ALL</button>
+<button class="host-pill px-2 py-0.5 rounded bg-surface-container-low border border-structural-border-subtle/70 text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase hover:text-paper-light transition-all" type="button">BETTY</button>
+<button class="host-pill px-2 py-0.5 rounded bg-surface-container-low border border-structural-border-subtle/70 text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase hover:text-paper-light transition-all" type="button">SOPHIA</button>
+<button class="host-pill px-2 py-0.5 rounded bg-surface-container-low border border-structural-border-subtle/70 text-on-surface-variant font-label-mono-sm text-label-mono-sm uppercase hover:text-paper-light transition-all" type="button">GRACE</button>
+</div>
+</div>
+</section>
+<!-- PIT STEEL TABLES LIST -->
+<section class="px-margin flex flex-col gap-3 mt-1" id="pit-card-container">
+<!-- TABLE 1: SIC BO D101 -->
+<article class="table-card w-full rounded-lg overflow-hidden bg-pit-steel border border-structural-border shadow-[0_4px_16px_rgba(4,10,24,0.5)] flex flex-col transition-all duration-200 hover:border-ice-rim">
+<!-- Card Topbar -->
+<div class="h-8 px-2.5 bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between border-b border-structural-border-subtle">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-paper-light tracking-wide uppercase">SIC BO D101</span>
+<span class="bg-badge-navy/80 text-ice-signal font-badge-caps text-badge-caps px-1 py-0.5 rounded border border-ice-signal/40">BEGINNER</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-mist-caption"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">Resulting...</span>
+</div>
+</div>
+<!-- Card Core Body -->
+<div class="p-2.5 flex items-stretch gap-3 bg-gradient-to-b from-pit-steel to-pit-steel-deep">
+<!-- Dealer Col (26%) -->
+<div class="w-[26%] shrink-0 flex flex-col items-center">
+<div class="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-container-lowest border border-structural-border-subtle/80">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of charismatic female live dealer Betty smiling warmly in tailored dark navy blazer under soft casino studio rim lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRsj82m2eg4xpFlLps1ZxjLI8mKK9E1_v8tleCt8HlZpg8dh7aERJCK11XZUysRcS3Oc5TF8ckXYpgVLmT3aQ29i82mOV2H37vmRveDsuamr0fe8ee1RhWNmlQkEh0e_GVwWACwdKbmEjG84wCuz37krrGgz7RKLlbVb9ZV8uBnDfkzy4L-q_XJ5K6jaPgFOA2u-yadKqwOZjcvDiC_wS9U4c5166C_cpNCkCNgZTO_EDjzEM5Z73TVw"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light font-bold">BETTY</span>
+</div>
+</div>
+</div>
+<!-- Data & Result Chamber (74%) -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Top Row: Latest Dice Roll & Sum Plate -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase tracking-wider">LATEST ROLL</span>
+<div class="flex items-center gap-1.5 mt-1">
+<!-- Die 1: Pip 4 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex flex-col justify-between shadow-inner">
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+<!-- Die 2: Pip 5 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex flex-col justify-between shadow-inner">
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-center w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+<!-- Die 3: Pip 2 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-ice-signal shadow-[0_0_8px_rgba(73,217,255,0.35)] p-1 flex flex-col justify-between">
+<div class="flex justify-start w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-end w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sum Callout -->
+<div class="flex flex-col items-end pl-2">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase">TOTAL</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">SUM</span>
+<span class="font-label-mono-lg text-label-mono-lg text-paper-light font-bold tracking-tight">11</span>
+</div>
+<span class="font-badge-caps text-badge-caps text-ice-signal uppercase tracking-wider">MID / BIG</span>
+</div>
+</div>
+<!-- Bottom Row: Table Limits & Enter Button -->
+<div class="pt-2 mt-1 border-t border-structural-border-subtle/60 flex items-center justify-between gap-2">
+<div class="flex flex-col truncate">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">LIMITS</span>
+<span class="font-label-mono-md text-label-mono-md text-paper-light font-semibold truncate">$500 - $250,000</span>
+</div>
+<button class="h-9 px-3.5 rounded bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-badge-caps font-extrabold uppercase tracking-wider shadow hover:brightness-110 active:scale-95 transition-all flex items-center gap-1 shrink-0" type="button">
+<span>ENTER</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- TABLE 2: SIC BO D102 -->
+<article class="table-card w-full rounded-lg overflow-hidden bg-pit-steel border border-structural-border shadow-[0_4px_16px_rgba(4,10,24,0.5)] flex flex-col transition-all duration-200 hover:border-ice-rim">
+<!-- Card Topbar -->
+<div class="h-8 px-2.5 bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between border-b border-structural-border-subtle">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-paper-light tracking-wide uppercase">SIC BO D102</span>
+<span class="bg-badge-navy/80 text-ice-signal font-badge-caps text-badge-caps px-1 py-0.5 rounded border border-ice-signal/40">BEGINNER</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tie-slash animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">Dice Shaken</span>
+</div>
+</div>
+<!-- Card Core Body -->
+<div class="p-2.5 flex items-stretch gap-3 bg-gradient-to-b from-pit-steel to-pit-steel-deep">
+<!-- Dealer Col (26%) -->
+<div class="w-[26%] shrink-0 flex flex-col items-center">
+<div class="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-container-lowest border border-structural-border-subtle/80">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of elegant Asian live casino dealer Sophia with sleek updo hairstyle against dimmed navy blue casino backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnqVY2ia_8LnnGr6dp2Edom1Us7bQt3rSwP0myjiJLlHIcLH3ogpPWSjb8CwhtYM_X0iRTH0tI48mJPAmF0yZHuG_GDVjfEyBTIZsTaJ2PB1awDWQYseP8cdIip_B3myDufQiXiVOMugqpylkwou0q4GNsJ7PQ6lsh1TvGGaGUeCpuj8TvBAxy9W1WviUO4uYZ6hDqpZ9RDzqCqk0a4RRgUIqPiyYHjQSJMduZcWpV-tdCafQhZQAhrQ"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light font-bold">SOPHIA</span>
+</div>
+</div>
+</div>
+<!-- Data & Result Chamber (74%) -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Top Row: Latest Dice Roll & Sum Plate -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase tracking-wider">LATEST ROLL</span>
+<div class="flex items-center gap-1.5 mt-1">
+<!-- Die 1: Pip 3 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex flex-col justify-between shadow-inner">
+<div class="flex justify-start w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-center w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-end w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+<!-- Die 2: Pip 6 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex flex-col justify-between shadow-inner">
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+<!-- Die 3: Pip 6 (Active / Highlighted) -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-ice-signal shadow-[0_0_8px_rgba(73,217,255,0.35)] p-1 flex flex-col justify-between">
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sum Callout -->
+<div class="flex flex-col items-end pl-2">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase">TOTAL</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">SUM</span>
+<span class="font-label-mono-lg text-label-mono-lg text-paper-light font-bold tracking-tight">15</span>
+</div>
+<span class="font-badge-caps text-badge-caps text-banker-bead uppercase tracking-wider">BIG DOUBLE</span>
+</div>
+</div>
+<!-- Bottom Row: Table Limits & Enter Button -->
+<div class="pt-2 mt-1 border-t border-structural-border-subtle/60 flex items-center justify-between gap-2">
+<div class="flex flex-col truncate">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">LIMITS</span>
+<span class="font-label-mono-md text-label-mono-md text-paper-light font-semibold truncate">$1,000 - $500,000</span>
+</div>
+<button class="h-9 px-3.5 rounded bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-badge-caps font-extrabold uppercase tracking-wider shadow hover:brightness-110 active:scale-95 transition-all flex items-center gap-1 shrink-0" type="button">
+<span>ENTER</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- TABLE 3: SIC BO D301 (ROYAL) -->
+<article class="table-card w-full rounded-lg overflow-hidden bg-pit-steel border border-structural-border shadow-[0_4px_16px_rgba(4,10,24,0.5)] flex flex-col transition-all duration-200 hover:border-ice-rim">
+<!-- Card Topbar -->
+<div class="h-8 px-2.5 bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between border-b border-structural-border-subtle">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-paper-light tracking-wide uppercase">SIC BO D301</span>
+<span class="bg-pit-steel-deep text-paper-light border border-structural-border font-badge-caps text-badge-caps px-1 py-0.5 rounded">ROYAL SALON</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal animate-ping"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-ice-signal font-semibold">Bets Open (12s)</span>
+</div>
+</div>
+<!-- Card Core Body -->
+<div class="p-2.5 flex items-stretch gap-3 bg-gradient-to-b from-pit-steel to-pit-steel-deep">
+<!-- Dealer Col (26%) -->
+<div class="w-[26%] shrink-0 flex flex-col items-center">
+<div class="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-container-lowest border border-structural-border-subtle/80">
+<img class="w-full h-full object-cover" data-alt="Refined live casino host Grace wearing evening sapphire attire and crystal lapel pin inside high-limit Sic Bo chamber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXv8CpupvTugZpOFowE5YkKz4TTOTAZ9mUjMKz2i_RCw8RjxkoeqnzgZBeMA1ADQjWGn2-4dMhXR4YeM1PWtO8hrjjwXWqeVv5ktsvLaeAkVs0Ea5NDNplRrTh9RBv_d_kRQ-Nu8Msrxs_HqIB-b-R0qBp_T9Tzq7TPDdw-55QSo4T24_rqCXtCZYq31S0QBXuTXaUw1A8brAdCKyBzSRmrqDg6d5kwa8HwYZBYf5vYxgJX2A63PXmSg"/>
+<div class="absolute bottom-0 inset-x-0 bg-dealer-caption backdrop-blur-sm py-0.5 text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light font-bold">GRACE</span>
+</div>
+</div>
+</div>
+<!-- Data & Result Chamber (74%) -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Top Row: Latest Dice Roll & Sum Plate -->
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase tracking-wider">LATEST ROLL</span>
+<div class="flex items-center gap-1.5 mt-1">
+<!-- Die 1: Pip 1 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex items-center justify-center shadow-inner">
+<span class="w-2 h-2 rounded-full bg-paper-light"></span>
+</div>
+<!-- Die 2: Pip 2 -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-structural-border p-1 flex flex-col justify-between shadow-inner">
+<div class="flex justify-start w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-end w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+<!-- Die 3: Pip 4 (Active / Highlighted) -->
+<div class="w-[34px] h-[34px] rounded bg-surface-container-lowest border border-ice-signal shadow-[0_0_8px_rgba(73,217,255,0.35)] p-1 flex flex-col justify-between">
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+<div class="flex justify-between w-full">
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-paper-light"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sum Callout -->
+<div class="flex flex-col items-end pl-2">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption uppercase">TOTAL</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">SUM</span>
+<span class="font-label-mono-lg text-label-mono-lg text-paper-light font-bold tracking-tight">7</span>
+</div>
+<span class="font-badge-caps text-badge-caps text-player-bead uppercase tracking-wider">SMALL</span>
+</div>
+</div>
+<!-- Bottom Row: Table Limits & Enter Button -->
+<div class="pt-2 mt-1 border-t border-structural-border-subtle/60 flex items-center justify-between gap-2">
+<div class="flex flex-col truncate">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">LIMITS</span>
+<span class="font-label-mono-md text-label-mono-md text-paper-light font-semibold truncate">$5,000 - $2,000,000</span>
+</div>
+<button class="h-9 px-3.5 rounded bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-headline-sm text-badge-caps font-extrabold uppercase tracking-wider shadow hover:brightness-110 active:scale-95 transition-all flex items-center gap-1 shrink-0" type="button">
+<span>ENTER</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- PIT QUICK SUMMARY BANNER -->
+<section class="px-margin mt-3">
+<div class="p-2.5 rounded bg-surface-container/60 border border-structural-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-ice-signal text-[20px]">info</span>
+<span class="font-body-sm text-body-sm text-mist-caption">Automated optical dice sensor sync is active.</span>
+</div>
+<span class="font-label-mono-sm text-label-mono-sm text-paper-light">SHOE #88</span>
+</div>
+</section>
+</div>
+<script>
+  // Filter pill micro-interaction
+  document.querySelectorAll('.tier-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tier-pill').forEach(b => {
+        b.classList.remove('bg-table-header-start', 'border-ice-signal', 'text-ice-signal');
+        b.classList.add('bg-surface-container', 'border-structural-border-subtle', 'text-mist-caption');
+      });
+      btn.classList.add('bg-table-header-start', 'border-ice-signal', 'text-ice-signal');
+      btn.classList.remove('bg-surface-container', 'border-structural-border-subtle', 'text-mist-caption');
+    });
+  });
+
+  document.querySelectorAll('.host-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.host-pill').forEach(b => {
+        b.classList.remove('bg-pit-steel-deep', 'border-ice-signal/70', 'text-ice-signal');
+        b.classList.add('bg-surface-container-low', 'border-structural-border-subtle/70', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-pit-steel-deep', 'border-ice-signal/70', 'text-ice-signal');
+      btn.classList.remove('bg-surface-container-low', 'border-structural-border-subtle/70', 'text-on-surface-variant');
+    });
+  });
+</script></main><nav class="fixed bottom-0 max-w-[430px] w-full z-50 pb-safe bg-pit-steel/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(4,10,24,0.7)]" data-active-classes="text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 transition-colors text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40" data-path="lobby" href="#"><span class="material-symbols-outlined text-[22px]">casino</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Lobby</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="category-tables" href="#"><span class="material-symbols-outlined text-[22px]">view_comfy</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Tables</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="roadmap" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Roadmap</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">History</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Account</span></a></div></nav></div></body></html>

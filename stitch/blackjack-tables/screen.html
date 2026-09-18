@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'inverse-on-surface': '#2a2f46', 'structural-border-subtle': '#244574', 'wallet-glass': '#122653c7', 'primary': '#baedff', 'dealer-caption': '#195d9ad9', 'on-primary': '#003642', 'inverse-surface': '#dde1ff', 'paper-light': '#f4f8ff', 'tie-slash': '#39eb82', 'secondary': '#8ed0ec', 'on-primary-container': '#005c70', 'on-tertiary-container': '#42547b', 'on-secondary': '#003545', 'primary-fixed': '#b3ebff', 'surface-container-highest': '#2f334b', 'pit-steel-deep': '#143363', 'outline-variant': '#3c494d', 'tertiary-fixed': '#d8e2ff', 'primary-fixed-dim': '#45d7fc', 'error-container': '#93000a', 'structural-border': '#579ce7', 'on-primary-fixed': '#001f27', 'surface-dim': '#0d1228', 'stage-night': '#090e1c', 'on-tertiary': '#1c3055', 'player-bead': '#75c5ff', 'on-error-container': '#ffdad6', 'surface': '#0d1228', 'surface-container-low': '#151a30', 'on-primary-fixed-variant': '#004e5f', 'outline': '#869398', 'primary-container': '#49d9ff', 'pit-steel': '#14284d', 'error': '#ffb4ab', 'tertiary-fixed-dim': '#b4c6f4', 'tertiary-container': '#b6c9f7', 'mist-caption-soft': '#aac9e8', 'enter-ice-end': '#9cdefb', 'hero-violet': '#3222a1', 'surface-container-lowest': '#080d22', 'wallet-rim': '#345e9b', 'banker-bead': '#ef54b9', 'on-surface-variant': '#bcc9ce', 'surface-bright': '#333850', 'on-secondary-container': '#8dcfec', 'surface-container': '#191e35', 'on-tertiary-fixed-variant': '#34466d', 'badge-navy': '#134b6e', 'surface-container-high': '#242940', 'mist-caption': '#a9ccef', 'secondary-container': '#005a72', 'enter-ice-start': '#e4ffff', 'secondary-fixed': '#bbe9ff', 'on-background': '#dde1ff', 'on-secondary-fixed': '#001f29', 'on-secondary-fixed-variant': '#004d63', 'frame-navy': '#11162c', 'surface-variant': '#2f334b', 'inverse-primary': '#00677d', 'on-error': '#690005', 'on-tertiary-fixed': '#041a3f', 'surface-tint': '#45d7fc', 'background': '#0d1228', 'table-header-start': '#1d477f', 'table-header-end': '#213761', 'ice-signal': '#49d9ff', 'ice-focus': '#83e7ff', 'secondary-fixed-dim': '#8ed0ec', 'tertiary': '#dce5ff', 'on-surface': '#dde1ff', 'ice-rim': '#4fc9ff', 'enter-ink': '#053358' }, borderRadius: { 'DEFAULT': '0.125rem', 'lg': '0.25rem', 'xl': '0.5rem', 'full': '0.75rem' }, spacing: { 'gutter': '0.5rem', 'margin-mobile': '0.5rem', 'space-xs': '0.25rem', 'space-xl': '1.25rem', 'margin': '0.75rem', 'space-md': '0.75rem', 'space-xxs': '0.125rem', 'gutter-loose': '0.75rem', 'space-sm': '0.5rem', 'space-lg': '1rem', 'space-2xl': '1.75rem' }, fontFamily: { 'headline-lg': ['Outfit'], 'headline-lg-mobile': ['Outfit'], 'label-mono-lg': ['Geist Mono'], 'badge-caps': ['Outfit'], 'label-mono-sm': ['Geist Mono'], 'headline-sm': ['Outfit'], 'body-sm': ['Outfit'], 'body-md': ['Outfit'], 'label-mono-md': ['Geist Mono'], 'body-lg': ['Outfit'], 'headline-md': ['Outfit'] }, fontSize: { 'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '0.02em', fontWeight: '800' }], 'headline-lg-mobile': ['26px', { lineHeight: '32px', letterSpacing: '0.02em', fontWeight: '800' }], 'label-mono-lg': ['15px', { lineHeight: '20px', letterSpacing: '-0.01em', fontWeight: '600' }], 'badge-caps': ['10px', { lineHeight: '12px', letterSpacing: '0.08em', fontWeight: '800' }], 'label-mono-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.05em', fontWeight: '500' }], 'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-sm': ['11px', { lineHeight: '16px', fontWeight: '400' }], 'body-md': ['13px', { lineHeight: '19px', fontWeight: '400' }], 'label-mono-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '500' }], 'body-lg': ['15px', { lineHeight: '22px', fontWeight: '500' }], 'headline-md': ['20px', { lineHeight: '26px', letterSpacing: '0.03em', fontWeight: '700' }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; min-height: 100dvh; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-stage-night text-on-surface flex justify-center selection:bg-ice-signal selection:text-enter-ink"><div class="w-full max-w-[430px] min-h-screen bg-frame-navy flex flex-col relative shadow-[0_0_40px_rgba(0,0,0,0.8)]"><header class="fixed top-0 max-w-[430px] w-full z-50 pt-safe bg-gradient-to-b from-[#1a315f] to-[#142146] backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="h-14 px-gutter flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="AI Live Casino Lite Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XTiCCyDdU4qvyY3f6294JR9BD3MQw61L_98BJ0AMbrw3SfC-OU6uMK1WdG7PAD8eRHJOEd4VItbLqbnFrung_A-H0KrQjAnVcDRMJfVIhysVdOl5Gmo9RKNpUfzai7126MrlHLXB5Z69n44vKbajgxZmdYA5v1dbmhx5rfyvbaNbmADQXUSqkxf6PYmoLEOjEsdetPsFcDZiSIuol8zCGcaOFzgfEeSQYwqjTBdFYIoXOlDDHdDOI-5kuu"/><div class="bg-wallet-glass/80 backdrop-blur-md px-space-xs py-space-xxs rounded-lg flex items-center gap-space-xs shadow-[0_0_8px_rgba(18,38,83,0.6)]"><span class="font-badge-caps text-badge-caps bg-badge-navy text-ice-signal px-space-xxs py-0.5 rounded-DEFAULT tracking-wider">DEMO</span><span class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">5,380,461</span><span class="font-label-mono-sm text-label-mono-sm text-mist-caption">PTS</span></div></div><div class="flex items-center gap-space-xs"><span class="hidden font-headline-sm text-headline-sm uppercase text-ice-signal">Category Tables</span><button aria-label="Mute Audio" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button aria-label="Pit Menu" class="w-11 h-11 flex items-center justify-center text-ice-signal hover:text-paper-light transition-colors"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-ice-signal/20"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPhlT7ILs1DeSdlHYDIFFC6Eay5y8r_evGKfwhyrfTYvdLF1BvfgRgSNTmfH6N39XGYS-dlnRE5QxvdKDotadS6Db3r_cvhE10TuEFYO6JfMioCbCR-kXba4ffpTGLA2vGvLyDvFjJEtuuugwM5W9XXyLK8FSM9KQJdHqa3ZdNn-_MiwlKzUycQFRYyrEd67XGOPT6DwruoK6my2KeOGCQbIDh7YlqupJDgKeHPyLHBDiOFqhgKDRVEg"/></div></div></div></header><main class="flex flex-col relative w-full pt-14 pb-20 bg-frame-navy flex-1"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- Category Selection Rail -->
+<div class="w-full overflow-x-auto no-scrollbar py-space-xs px-margin bg-stage-night/70 backdrop-blur-md">
+<div class="flex items-center space-x-space-md min-w-max">
+<!-- Blackjack (Active) -->
+<button class="flex flex-col items-center group cursor-pointer focus:outline-none" data-category="blackjack">
+<div class="relative w-12 h-12 rounded-full p-0.5 bg-ice-signal shadow-[0_0_12px_rgba(73,217,255,0.4)] transition-transform duration-200 scale-105">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of sleek casino blackjack table layout with deep navy wool, subtle ice-cyan digital betting nodes, and crisp cards under focused studio illumination" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa9Mn6HOQ0wCwLpQfw4I_14GuofoDRBctN6iNzH979WaB2536k__mLO5A8yRo-7M0foURtXry7y40F6XeYdFXXdMet9iLAFyLD-eyXnLaULlb691SgLlseMQXql-HIH4aWS0utt7nfHxyr1lxP-l7X-axo7ToiqVJh4tPpHvQVa_BvYKL6dxKEv69qavHw1mw_2qHkaz1dBJXGzTC5LH-NEwX86wsJ9Lw7vNbtDezNgdD6dvpQ5YOv5Q"/>
+</div>
+</div>
+<span class="mt-space-xxs font-badge-caps text-badge-caps text-ice-signal uppercase tracking-wider">Blackjack</span>
+</button>
+<!-- Baccarat -->
+<button class="flex flex-col items-center group cursor-pointer opacity-75 hover:opacity-100 focus:outline-none" data-category="baccarat">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel transition-transform duration-200">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel-deep">
+<img class="w-full h-full object-cover" data-alt="High quality professional casino dealer baccarat table showing patterned bead road tiles and pristine red and yellow card shoe in modern sapphire studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2v0tX2FCX3TZLo6eg249dAbygEr4p2ZDr3x2aNGZf6LQU1O_hRc2_q6Y1ERcxgCTk3t71A7RWzhrPVw7TzZZTlsoM76NxBQOeqyNkEUajziVak3fe1aOAPoGy8_zn6pYH9TX-qiR4sMlVPW1nB98ZCkC2CxSbgItbNkkgeeBJWnq5C9-qXuh2aCvp148T5rCxCYveuCu5MLKQsbrcMx_1oi1BW1hL80IpgtFQS0ayXhNoLmrdla0Ng"/>
+</div>
+</div>
+<span class="mt-space-xxs font-body-sm text-body-sm text-mist-caption group-hover:text-paper-light uppercase">Baccarat</span>
+</button>
+<!-- Roulette -->
+<button class="flex flex-col items-center group cursor-pointer opacity-75 hover:opacity-100 focus:outline-none" data-category="roulette">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel transition-transform duration-200">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel-deep">
+<img class="w-full h-full object-cover" data-alt="Macro live dealer roulette wheel precision polished mahogany and cold steel frets under cinematic rim lighting in dark casino arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5AFbJrpmz-JOwrG3KgUGGiB6R3YwpwLPz3LvoNcpRiaC_29SjEBzOJe028ow6wuDjCVXo1nrPwKkUeXHDuE5CCFVyT9F-Jmg1ICJPMukYyAfjpQJif5CIrxqs_Xiunn-a0NIaeDYWX7oOCKyJPywaUOyuJwYtHJh7YlwjfsbPefKrbexvZEUMnabG1XH0zE4bvtY69o3iY70jOai9rcYKU8w-IMbseY2LLfrhBBr9CNzJJ2PBlf6sfg"/>
+</div>
+</div>
+<span class="mt-space-xxs font-body-sm text-body-sm text-mist-caption group-hover:text-paper-light uppercase">Roulette</span>
+</button>
+<!-- Poker -->
+<button class="flex flex-col items-center group cursor-pointer opacity-75 hover:opacity-100 focus:outline-none" data-category="poker">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel transition-transform duration-200">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel-deep">
+<img class="w-full h-full object-cover" data-alt="Live dealer Texas Holdem poker table green felt with dealer hands dealing community cards in high stakes television broadcast studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgSmgh-ocW3GCiySEVyHm6Haxdfsrsbp_3baMpBkF3GVtgO83VnG6cx2kQQQBLT5VCQoUYX7VTmoRcsv5qmE9-GoDYQM7m3D4MGGjO0Dy9kpcegWbbTxZGKCUTmw_0T8NvfQnM2ClF9bNk8udl4Qep6cAR3bECSBZDnbaeAB0eqemQBBCuhTgFEFhF_k3O5zcRvRoADmIz_Ohml92_QKOrixcLJCjaATWA_053j_wrnFgZfzxLI43OEQ"/>
+</div>
+</div>
+<span class="mt-space-xxs font-body-sm text-body-sm text-mist-caption group-hover:text-paper-light uppercase">Poker</span>
+</button>
+<!-- Game Shows -->
+<button class="flex flex-col items-center group cursor-pointer opacity-75 hover:opacity-100 focus:outline-none" data-category="shows">
+<div class="w-12 h-12 rounded-full p-0.5 bg-pit-steel transition-transform duration-200">
+<div class="w-full h-full rounded-full overflow-hidden bg-pit-steel-deep">
+<img class="w-full h-full object-cover" data-alt="Futuristic luminous vertical multiplier money wheel with ice cyan and electric blue digital stage lighting elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL4LARuGIti7wCDhD4r3cJ-og8WKA3F-wE9i6ymZwSoKS-d0EXQ5A2arb-PcPVoTh6Vdws_hsll3QYYv0jDaXBQT_P0TP_FwVr951XSm-HEWn-MB2EHq1JyII_wdEDI4-BsHHp7SbcEmpzD68PsBmboWMbXnQuqu4ZimOZj17lQExOItZBa4XUfumAPY17OqvraSzjwKG-Z6VLKhJudpE6qnGyEH8-ySNGRL8zLu6QXF4KAvGBz1xukA"/>
+</div>
+</div>
+<span class="mt-space-xxs font-body-sm text-body-sm text-mist-caption group-hover:text-paper-light uppercase">Shows</span>
+</button>
+</div>
+</div>
+<!-- Filter Strip: Level & Dealer Pills -->
+<div class="px-margin flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="font-headline-sm text-headline-sm uppercase text-paper-light tracking-wide">Pit Tables</span>
+<span class="bg-badge-navy text-ice-signal font-label-mono-sm text-label-mono-sm px-1.5 py-0.5 rounded-DEFAULT">3 LIVE</span>
+</div>
+<button class="text-mist-caption-soft hover:text-ice-signal font-badge-caps text-badge-caps uppercase tracking-wider flex items-center gap-0.5 transition-colors" id="reset-filters">
+<span class="material-symbols-outlined text-[14px]">filter_alt_off</span>
+<span>Clear</span>
+</button>
+</div>
+<!-- Filter Pills Scroller -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-0.5">
+<!-- Level Filters -->
+<div class="flex items-center bg-surface-container-lowest p-0.5 rounded-lg space-x-0.5">
+<button class="filter-tier-btn px-2.5 py-1 rounded-DEFAULT font-label-mono-sm text-label-mono-sm transition-all bg-pit-steel text-ice-signal shadow-sm" data-tier="all">
+          ALL TIERS
+        </button>
+<button class="filter-tier-btn px-2.5 py-1 rounded-DEFAULT font-label-mono-sm text-label-mono-sm transition-all text-on-surface-variant hover:text-paper-light" data-tier="beginner">
+          BEGINNER
+        </button>
+<button class="filter-tier-btn px-2.5 py-1 rounded-DEFAULT font-label-mono-sm text-label-mono-sm transition-all text-on-surface-variant hover:text-paper-light" data-tier="royal">
+          ROYAL
+        </button>
+</div>
+<!-- Divider -->
+<div class="h-5 w-px bg-structural-border-subtle shrink-0"></div>
+<!-- Dealer Filters -->
+<div class="flex items-center bg-surface-container-lowest p-0.5 rounded-lg space-x-0.5">
+<button class="filter-dealer-btn px-2.5 py-1 rounded-DEFAULT font-badge-caps text-badge-caps transition-all text-on-surface-variant hover:text-paper-light" data-dealer="all">
+          ALL DEALERS
+        </button>
+<button class="filter-dealer-btn px-2 py-1 rounded-DEFAULT font-badge-caps text-badge-caps transition-all text-on-surface-variant hover:text-paper-light" data-dealer="sophia">
+          SOPHIA
+        </button>
+<button class="filter-dealer-btn px-2 py-1 rounded-DEFAULT font-badge-caps text-badge-caps transition-all text-on-surface-variant hover:text-paper-light" data-dealer="grace">
+          GRACE
+        </button>
+<button class="filter-dealer-btn px-2 py-1 rounded-DEFAULT font-badge-caps text-badge-caps transition-all text-on-surface-variant hover:text-paper-light" data-dealer="amelia">
+          AMELIA
+        </button>
+</div>
+</div>
+</div>
+<!-- Table Cards Stack (One Column) -->
+<div class="px-margin flex flex-col space-y-space-md" id="table-stack">
+<!-- Table 1: B101 Sophia Beginner -->
+<article class="table-card bg-pit-steel rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-0.5" data-dealer="sophia" data-tier="beginner">
+<!-- Top Bar Gradient Header -->
+<div class="px-space-md py-space-xs bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="w-2 h-2 rounded-full bg-ice-signal animate-pulse"></span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-paper-light tracking-wide">BLACKJACK B101</h2>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption bg-frame-navy/60 px-1 rounded-DEFAULT">LVL 1</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">Dealing</span>
+<span class="w-1.5 h-1.5 rounded-full bg-ice-signal"></span>
+</div>
+</div>
+<!-- Main Body Split Structure -->
+<div class="p-space-sm flex gap-space-sm items-stretch">
+<!-- Dealer Stage Column (28% width) -->
+<div class="w-[28%] shrink-0 flex flex-col rounded-lg overflow-hidden bg-frame-navy relative">
+<div class="w-full aspect-[3/4] relative overflow-hidden bg-stage-night">
+<img class="w-full h-full object-cover" data-alt="Portrait of elegant European female live dealer Sophia wearing midnight navy formal vest smiling pleasantly at high stakes live blackjack table with cold ice blue stage rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhLjTnpB9PO8dZ5MnAADEMXgOoDwVtwkQMYGc--u-bxF_dcq9NVgLVgBOeL5QPc0xHlVbDOvafv9oIZHSi-Tsiy7jrx8EP1-TMY9WJz7ap4c4fA60iwATvbFQi7BYJk0CI-uAriaqA1-S2hmTDroJKP-8Hng78wN9D-96O4Enb185d55TrrvZ_ytqtxU_vMUnnjOxhRLVg0qgyr8NJ3wsICLYcYzpT41DawiFJUA3oNBz2iW2nDsgcTg"/>
+</div>
+<!-- Dealer Nameplate -->
+<div class="w-full py-1 bg-dealer-caption text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light block truncate px-1">Sophia</span>
+</div>
+</div>
+<!-- Table Data & Hand Column -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Limits & Hand Row -->
+<div class="flex items-start justify-between gap-space-xs">
+<!-- Limit & Shoe Details -->
+<div class="flex flex-col space-y-0.5">
+<span class="font-body-sm text-body-sm text-mist-caption-soft uppercase">LIMITS (PTS)</span>
+<div class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">
+                $1,000 – $500,000
+              </div>
+<div class="font-label-mono-sm text-label-mono-sm text-mist-caption pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">style</span>
+<span>SHOE 34 / 8 DECKS</span>
+</div>
+</div>
+<!-- Signature Two-Card Thumbnail Pair -->
+<div class="flex items-center relative pl-3 shrink-0 py-0.5">
+<!-- Up-Card (Ace of Spades) -->
+<div class="w-10 h-14 rounded-lg bg-paper-light text-on-primary-container p-1 flex flex-col justify-between shadow-md relative z-10">
+<div class="flex flex-col items-start leading-none">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-enter-ink">A</span>
+<span class="text-[10px] leading-none text-enter-ink">♠</span>
+</div>
+<div class="flex justify-center items-center">
+<span class="text-sm leading-none text-enter-ink">♠</span>
+</div>
+<div class="flex flex-col items-end leading-none rotate-180">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-enter-ink">A</span>
+</div>
+</div>
+<!-- Down-Card (Ice Grid Pattern Back) -->
+<div class="w-10 h-14 rounded-lg bg-pit-steel-deep text-ice-signal p-1 flex flex-col justify-center items-center shadow-md -ml-5 mt-1 relative z-0">
+<div class="w-full h-full rounded-DEFAULT bg-badge-navy flex items-center justify-center p-0.5">
+<span class="material-symbols-outlined text-[16px] text-ice-signal/80">pattern</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Enter Table Docked CTA -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tie-slash"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">5 SEATS OPEN</span>
+</div>
+<button class="px-space-md py-1.5 rounded-DEFAULT bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-badge-caps text-badge-caps uppercase tracking-wider shadow-sm hover:brightness-110 active:scale-95 transition-all flex items-center gap-1">
+<span>ENTER TABLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Table 2: B102 Grace Beginner -->
+<article class="table-card bg-pit-steel rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-0.5" data-dealer="grace" data-tier="beginner">
+<!-- Top Bar Gradient Header -->
+<div class="px-space-md py-space-xs bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="w-2 h-2 rounded-full bg-mist-caption"></span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-paper-light tracking-wide">BLACKJACK B102</h2>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption bg-frame-navy/60 px-1 rounded-DEFAULT">LVL 1</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">Shuffling</span>
+<span class="material-symbols-outlined text-[14px] text-mist-caption animate-spin">sync</span>
+</div>
+</div>
+<!-- Main Body Split Structure -->
+<div class="p-space-sm flex gap-space-sm items-stretch">
+<!-- Dealer Stage Column (28% width) -->
+<div class="w-[28%] shrink-0 flex flex-col rounded-lg overflow-hidden bg-frame-navy relative">
+<div class="w-full aspect-[3/4] relative overflow-hidden bg-stage-night">
+<img class="w-full h-full object-cover" data-alt="Portrait of brunette female live dealer Grace with hair tied in sleek ponytail dressed in sapphire casino vest overseeing blackjack cards shuffle in arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx3JyumQ7w54-IGYPDCXXQk1_B3z4JxXXnSn35JqxZo8bdvmQ8D6-1dKXkrt61UG9j4-o0kjT957R02edUjN0WkySSxy8L_jJ_wiffChavTq5ZeuSx1-H0mV9riByQuuQxFrx16q6PpIz2cxelQZgLS5jTB2_5OhoIRybeCz4FSXn0SMqMornDIvJEoPAIu0Ql8IXWAjlNFCKqj4cp3kQRkFcK5CqrCf9SNZBpwMKIacizeSD6ew43ig"/>
+</div>
+<!-- Dealer Nameplate -->
+<div class="w-full py-1 bg-dealer-caption text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light block truncate px-1">Grace</span>
+</div>
+</div>
+<!-- Table Data & Hand Column -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Limits & Hand Row -->
+<div class="flex items-start justify-between gap-space-xs">
+<!-- Limit & Shoe Details -->
+<div class="flex flex-col space-y-0.5">
+<span class="font-body-sm text-body-sm text-mist-caption-soft uppercase">LIMITS (PTS)</span>
+<div class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">
+                $2,500 – $1,000,000
+              </div>
+<div class="font-label-mono-sm text-label-mono-sm text-mist-caption pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">style</span>
+<span>SHOE 12 / 6 DECKS</span>
+</div>
+</div>
+<!-- Signature Two-Card Thumbnail Pair (King of Hearts Pip Crimson + Face Down) -->
+<div class="flex items-center relative pl-3 shrink-0 py-0.5">
+<!-- Up-Card (King of Hearts) -->
+<div class="w-10 h-14 rounded-lg bg-paper-light text-error p-1 flex flex-col justify-between shadow-md relative z-10">
+<div class="flex flex-col items-start leading-none">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-error">K</span>
+<span class="text-[10px] leading-none text-error">♥</span>
+</div>
+<div class="flex justify-center items-center">
+<span class="text-sm leading-none text-error">♥</span>
+</div>
+<div class="flex flex-col items-end leading-none rotate-180">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-error">K</span>
+</div>
+</div>
+<!-- Down-Card -->
+<div class="w-10 h-14 rounded-lg bg-pit-steel-deep text-ice-signal p-1 flex flex-col justify-center items-center shadow-md -ml-5 mt-1 relative z-0">
+<div class="w-full h-full rounded-DEFAULT bg-badge-navy flex items-center justify-center p-0.5">
+<span class="material-symbols-outlined text-[16px] text-ice-signal/80">grid_4x4</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Enter Table Docked CTA -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-ice-signal"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">3 SEATS OPEN</span>
+</div>
+<button class="px-space-md py-1.5 rounded-DEFAULT bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-badge-caps text-badge-caps uppercase tracking-wider shadow-sm hover:brightness-110 active:scale-95 transition-all flex items-center gap-1">
+<span>ENTER TABLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Table 3: B301 Amelia Royal -->
+<article class="table-card bg-pit-steel rounded-xl overflow-hidden shadow-lg transition-transform hover:-translate-y-0.5" data-dealer="amelia" data-tier="royal">
+<!-- Top Bar Gradient Header -->
+<div class="px-space-md py-space-xs bg-gradient-to-r from-table-header-start to-table-header-end flex items-center justify-between">
+<div class="flex items-center space-x-space-xs">
+<span class="w-2 h-2 rounded-full bg-banker-bead"></span>
+<h2 class="font-headline-sm text-headline-sm uppercase text-paper-light tracking-wide">BLACKJACK B301</h2>
+<span class="font-label-mono-sm text-label-mono-sm text-ice-signal bg-hero-violet/80 px-1.5 rounded-DEFAULT font-bold">ROYAL VIP</span>
+</div>
+<div class="flex items-center space-x-1.5">
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">Resulting...</span>
+<span class="w-1.5 h-1.5 rounded-full bg-banker-bead animate-pulse"></span>
+</div>
+</div>
+<!-- Main Body Split Structure -->
+<div class="p-space-sm flex gap-space-sm items-stretch">
+<!-- Dealer Stage Column (28% width) -->
+<div class="w-[28%] shrink-0 flex flex-col rounded-lg overflow-hidden bg-frame-navy relative">
+<div class="w-full aspect-[3/4] relative overflow-hidden bg-stage-night">
+<img class="w-full h-full object-cover" data-alt="Portrait of senior VIP croupier Amelia with refined composed expression in dark diamond-stitched royal casino salon with ambient cyan backlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARc3ahL_yn5rf8ScOVYoVL6rCxzYhnJc8TCHW2vV4C1naE-G_bv-bdU56qF2lxeMirt1cW_6a7KTl6ZwZnnoXJfMR_epTMXRDs7zoSyeaQkj1WRpnoM7wMBpVietfebSX8B0Con0k9Z0cZfvPXSqOrbLDYTNqHWw51HAk2FL319k7r6LlEEUtXi0PzHsj4faAhxxFHINmUOnZrry0wuaXRjSGhEKvgVJq4Y11iG8gITV1PefOYqkJxEg"/>
+</div>
+<!-- Dealer Nameplate -->
+<div class="w-full py-1 bg-dealer-caption text-center">
+<span class="font-badge-caps text-badge-caps uppercase tracking-wider text-paper-light block truncate px-1">Amelia</span>
+</div>
+</div>
+<!-- Table Data & Hand Column -->
+<div class="flex-1 flex flex-col justify-between min-w-0">
+<!-- Limits & Hand Row -->
+<div class="flex items-start justify-between gap-space-xs">
+<!-- Limit & Shoe Details -->
+<div class="flex flex-col space-y-0.5">
+<span class="font-body-sm text-body-sm text-mist-caption-soft uppercase">LIMITS (PTS)</span>
+<div class="font-label-mono-md text-label-mono-md text-paper-light tracking-tight">
+                $10,000 – $2,000,000
+              </div>
+<div class="font-label-mono-sm text-label-mono-sm text-mist-caption pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">style</span>
+<span>SHOE 48 / 8 DECKS</span>
+</div>
+</div>
+<!-- Signature Two-Card Thumbnail Pair (Blackjack 21 Ace + 10) -->
+<div class="flex items-center relative pl-3 shrink-0 py-0.5">
+<!-- Up-Card 1 (Ace of Diamonds) -->
+<div class="w-10 h-14 rounded-lg bg-paper-light text-error p-1 flex flex-col justify-between shadow-md relative z-10">
+<div class="flex flex-col items-start leading-none">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-error">A</span>
+<span class="text-[10px] leading-none text-error">♦</span>
+</div>
+<div class="flex justify-center items-center">
+<span class="text-sm leading-none text-error">♦</span>
+</div>
+<div class="flex flex-col items-end leading-none rotate-180">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-error">A</span>
+</div>
+</div>
+<!-- Up-Card 2 (10 of Spades - Natural 21) -->
+<div class="w-10 h-14 rounded-lg bg-paper-light text-enter-ink p-1 flex flex-col justify-between shadow-md -ml-5 mt-1 relative z-20">
+<div class="flex flex-col items-start leading-none">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-enter-ink">10</span>
+<span class="text-[10px] leading-none text-enter-ink">♠</span>
+</div>
+<div class="flex justify-center items-center">
+<span class="text-sm leading-none text-enter-ink">♠</span>
+</div>
+<div class="flex flex-col items-end leading-none rotate-180">
+<span class="font-label-mono-sm text-label-mono-sm font-bold text-enter-ink">10</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Enter Table Docked CTA -->
+<div class="mt-space-sm pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tie-slash"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-mist-caption">1 SEAT OPEN</span>
+</div>
+<button class="px-space-md py-1.5 rounded-DEFAULT bg-gradient-to-b from-enter-ice-start to-enter-ice-end text-enter-ink font-badge-caps text-badge-caps uppercase tracking-wider shadow-sm hover:brightness-110 active:scale-95 transition-all flex items-center gap-1">
+<span>ENTER TABLE</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Empty State Fallback Container (Hidden by default) -->
+<div class="hidden px-margin py-8 text-center flex-col items-center justify-center space-y-space-sm bg-pit-steel/40 rounded-xl mx-margin" id="empty-state">
+<div class="w-12 h-12 rounded-full bg-badge-navy flex items-center justify-center text-ice-signal">
+<span class="material-symbols-outlined text-[24px]">search_off</span>
+</div>
+<div class="flex flex-col space-y-1">
+<span class="font-headline-sm text-headline-sm text-paper-light">NO TABLES FOUND</span>
+<p class="font-body-sm text-body-sm text-mist-caption max-w-[240px]">
+        No live blackjack tables match your filter criteria. Reset filters to view all active dealers.
+      </p>
+</div>
+<button class="mt-2 px-space-md py-1.5 rounded-DEFAULT bg-pit-steel text-ice-signal hover:bg-badge-navy font-badge-caps text-badge-caps uppercase transition-colors" id="empty-reset-btn">
+      SHOW ALL TABLES
+    </button>
+</div>
+<!-- Operational Pit Policy Footer Notice -->
+<div class="px-margin pt-2 flex items-center justify-between text-mist-caption opacity-60">
+<span class="font-label-mono-sm text-label-mono-sm">RNG AUDITED • 3:2 BLACKJACK • DEALER STANDS ON 17</span>
+<span class="material-symbols-outlined text-[14px]">verified_user</span>
+</div>
+</div>
+<script>
+  (function() {
+    let activeTier = 'all';
+    let activeDealer = 'all';
+
+    const cards = document.querySelectorAll('.table-card');
+    const tierButtons = document.querySelectorAll('.filter-tier-btn');
+    const dealerButtons = document.querySelectorAll('.filter-dealer-btn');
+    const resetBtn = document.getElementById('reset-filters');
+    const emptyState = document.getElementById('empty-state');
+    const emptyResetBtn = document.getElementById('empty-reset-btn');
+
+    function applyFilters() {
+      let visibleCount = 0;
+      cards.forEach(card => {
+        const tierMatch = (activeTier === 'all') || (card.dataset.tier === activeTier);
+        const dealerMatch = (activeDealer === 'all') || (card.dataset.dealer === activeDealer);
+
+        if (tierMatch && dealerMatch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        emptyState.classList.remove('hidden');
+        emptyState.classList.add('flex');
+      } else {
+        emptyState.classList.add('hidden');
+        emptyState.classList.remove('flex');
+      }
+    }
+
+    tierButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tierButtons.forEach(b => {
+          b.classList.remove('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+        activeTier = btn.dataset.tier;
+        applyFilters();
+      });
+    });
+
+    dealerButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dealerButtons.forEach(b => {
+          b.classList.remove('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+        activeDealer = btn.dataset.dealer;
+        applyFilters();
+      });
+    });
+
+    function resetAll() {
+      activeTier = 'all';
+      activeDealer = 'all';
+      
+      tierButtons.forEach((b, idx) => {
+        if (idx === 0) {
+          b.classList.add('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.remove('text-on-surface-variant');
+        } else {
+          b.classList.remove('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        }
+      });
+
+      dealerButtons.forEach((b, idx) => {
+        if (idx === 0) {
+          b.classList.add('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.remove('text-on-surface-variant');
+        } else {
+          b.classList.remove('bg-pit-steel', 'text-ice-signal', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        }
+      });
+
+      applyFilters();
+    }
+
+    if (resetBtn) resetBtn.addEventListener('click', resetAll);
+    if (emptyResetBtn) emptyResetBtn.addEventListener('click', resetAll);
+  })();
+</script></main><nav class="fixed bottom-0 max-w-[430px] w-full z-50 pb-safe bg-pit-steel/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(4,10,24,0.7)]" data-active-classes="text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="lobby" href="#"><span class="material-symbols-outlined text-[22px]">casino</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Lobby</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 transition-colors text-ice-signal border-t-2 border-ice-signal bg-pit-steel-deep/40" data-path="category-tables" href="#"><span class="material-symbols-outlined text-[22px]">view_comfy</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Tables</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="roadmap" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Roadmap</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="history" href="#"><span class="material-symbols-outlined text-[22px]">history</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">History</span></a><a class="flex flex-col items-center justify-center gap-space-xxs w-16 h-14 text-on-surface-variant transition-colors" data-path="account" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-badge-caps text-badge-caps uppercase tracking-wider">Account</span></a></div></nav></div></body></html>

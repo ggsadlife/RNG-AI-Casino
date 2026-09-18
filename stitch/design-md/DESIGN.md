@@ -26,6 +26,23 @@ The mood is a dealer pit viewed through glass — cool, electric, slightly compr
 
 Preserve: the 9:16 central frame, navy and ice-cyan chrome, purple photographic hero, image-led game cards, blurred side stage on wide viewports.
 
+### Pit design systems
+
+Lobby chrome lives in this file. Generate each live pit from its own contract — same shell, different data board:
+
+| Category | Stitch contract | Tables |
+|----------|-----------------|--------|
+| Lucky Numbers | `lucky-numbers/DESIGN.md` | N101, N102, N301 |
+| Bingo Frenzy | `bingo-frenzy/DESIGN.md` | I001, I002, I301 |
+| Speed Frenzy | `speed-frenzy/DESIGN.md` | S101, S102, S301 |
+| Baccarat | `baccarat/DESIGN.md` | A104, A116, A318, A301 |
+| Roulette | `roulette/DESIGN.md` | R101, R102, R301 |
+| Sic Bo | `sic-bo/DESIGN.md` | D101, D102, D301 |
+| Craps | `craps/DESIGN.md` | C101, C102, C301 |
+| Blackjack | `blackjack/DESIGN.md` | B101, B102, B301 |
+
+Do not reuse the Baccarat bead road on other pits. Do not invent a second brand accent per game.
+
 ---
 
 ## 2. Color Palette & Roles

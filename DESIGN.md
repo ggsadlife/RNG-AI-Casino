@@ -26,6 +26,23 @@ The mood is a dealer pit viewed through glass — cool, electric, slightly compr
 
 Preserve: the 9:16 central frame, navy and ice-cyan chrome, purple photographic hero, image-led game cards, blurred side stage on wide viewports.
 
+### Pit design systems
+
+Lobby chrome lives here. Generate each live pit from its own Stitch contract — same shell, different data board:
+
+| Category | Stitch contract | Tables |
+|----------|-----------------|--------|
+| Lucky Numbers | `stitch/design-md/lucky-numbers/DESIGN.md` | N101, N102, N301 |
+| Bingo Frenzy | `stitch/design-md/bingo-frenzy/DESIGN.md` | I001, I002, I301 |
+| Speed Frenzy | `stitch/design-md/speed-frenzy/DESIGN.md` | S101, S102, S301 |
+| Baccarat | `stitch/design-md/baccarat/DESIGN.md` | A104, A116, A318, A301 |
+| Roulette | `stitch/design-md/roulette/DESIGN.md` | R101, R102, R301 |
+| Sic Bo | `stitch/design-md/sic-bo/DESIGN.md` | D101, D102, D301 |
+| Craps | `stitch/design-md/craps/DESIGN.md` | C101, C102, C301 |
+| Blackjack | `stitch/design-md/blackjack/DESIGN.md` | B101, B102, B301 |
+
+Do not reuse the Baccarat bead road on other pits. Do not invent a second brand accent per game.
+
 ---
 
 ## 2. Color Palette & Roles
@@ -146,3 +163,4 @@ Stitch exports static frames. Implement motion only in code, and keep it quiet.
 - Table preview is DEMO only — no bets, no live results
 - Artwork lives in `assets/` (hero, category tiles, avatar, stage)
 - Runtime for the current prototype: static HTML/CSS/JS, no external font hosts required in the shipped demo; Stitch comps may specify Outfit / Geist Mono for later implementation
+- Per-pit Stitch contracts: `stitch/design-md/<category>/DESIGN.md` for all eight games

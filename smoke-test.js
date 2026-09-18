@@ -104,10 +104,27 @@ assert(elements.tableList.innerHTML.includes("No tables match"));
 clickView(null, "clear-filters");
 assert((elements.tableList.innerHTML.match(/class="table-card"/g) || []).length === 4);
 
+clickView("category/blackjack");
+assert(elements.tableList.innerHTML.includes("card-pair"));
+assert(!elements.tableList.innerHTML.includes("ENTER TABLE"));
+clickView("category/roulette");
+assert(elements.tableList.innerHTML.includes("pocket-row"));
+clickView("category/sic-bo");
+assert(elements.tableList.innerHTML.includes("dice-row"));
+clickView("category/speed-frenzy");
+assert(elements.tableList.innerHTML.includes("result-chip"));
+
 clickView("table/baccarat/A104");
 assert(elements.view.innerHTML.includes("DEMO PREVIEW"));
 assert(document.title.includes("A104"));
 assert(elements.view.innerHTML.includes("Betting and live results are unavailable"));
+assert(elements.view.innerHTML.includes("shoe-card"));
+assert(elements.view.innerHTML.includes("12×5"));
+assert(elements.view.innerHTML.includes("Grace"));
+assert(!elements.view.innerHTML.includes("ENTER TABLE"));
+assert(!elements.view.innerHTML.includes("PREDICT NEXT"));
+assert(!elements.view.innerHTML.includes("1080p"));
+assert(!elements.view.innerHTML.includes("LATENCY"));
 
 elements.menuPanel.listeners.click({ target: { closest() { return { dataset: { action: "home" } }; } } });
 assert(elements.view.innerHTML.includes("lobby-view"));

@@ -465,6 +465,16 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   font-size: 13px;
 }
 
+.pit-kicker {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px 0;
+}
+.pit-kicker h2 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.pit-kicker span { color: var(--mist); font-family: "Geist Mono", ui-monospace, monospace; font-size: 11px; }
+
 .table-list { display: flex; flex-direction: column; gap: 8px; padding: 8px 12px 20px; }
 .table-card {
   overflow: hidden;
@@ -485,6 +495,17 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   text-transform: uppercase;
 }
 .table-heading strong { font-family: "Geist Mono", ui-monospace, monospace; font-size: 11px; font-weight: 500; color: var(--mist); background: #11162c80; padding: 2px 6px; border-radius: 4px; text-transform: none; letter-spacing: 0; }
+.table-heading em {
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #11162c80;
+  color: var(--mist);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
 .table-heading .resulting { margin-left: auto; color: var(--ice); font-family: "Geist Mono", ui-monospace, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0; text-transform: none; }
 .table-body { display: grid; grid-template-columns: 26% 1fr; gap: 8px; padding: 8px; }
 .dealer-tile { position: relative; min-height: 96px; overflow: hidden; border-radius: 8px; background: #182b57; }
@@ -513,6 +534,93 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
 }
 .table-art { min-height: 40px; overflow: hidden; border-radius: 4px; }
 .table-art img { width: 100%; height: 100%; object-fit: cover; }
+.board-label {
+  display: block;
+  color: var(--mist);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pocket-row, .num-row, .result-row, .dice-row, .card-pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+}
+.result-row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+.result-row::-webkit-scrollbar { display: none; }
+.pocket, .num-tile, .result-chip {
+  display: grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+}
+.pocket.red { background: #b5474e; }
+.pocket.black { background: #1c2744; }
+.pocket.green { background: #2f7a5b; }
+.pocket-row .pocket:first-child, .num-tile.current { box-shadow: 0 0 0 1px var(--ice); }
+.num-tile, .result-chip { background: #1d477f; }
+.die {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 28px;
+  height: 28px;
+  padding: 3px;
+  border: 1px solid #579ce7;
+  border-radius: 4px;
+  background: #080d22;
+}
+.die i { border-radius: 50%; }
+.die i.on { background: var(--paper); }
+.dice-sum { color: var(--mist); font-family: "Geist Mono", ui-monospace, monospace; font-size: 11px; font-weight: 600; }
+.playing-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 44px;
+  border-radius: 4px;
+  background: #f4f8ff;
+  color: #1c2744;
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 700;
+}
+.playing-card.h, .playing-card.d { color: #b5474e; }
+.bingo-mini {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  width: 100%;
+  max-width: 140px;
+}
+.bingo-cell {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 2px;
+  background: #080d22;
+  color: var(--mist);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 8px;
+  font-style: normal;
+}
+.bingo-cell.called { background: var(--pit-deep); color: var(--paper); box-shadow: inset 0 0 0 1px var(--ice); }
+.board-card {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--pit);
+}
 .table-actions { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .demo-tag { color: var(--mist); font-size: 9px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .limit-stack { display: flex; flex-direction: column; }
@@ -526,19 +634,164 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   text-align: center;
 }
 
-.detail-view { padding: 16px; gap: 12px; }
-.detail-top { display: flex; align-items: center; gap: 10px; }
-.detail-top h1 { margin: 0; font-size: 22px; text-transform: uppercase; }
-.detail-art { overflow: hidden; aspect-ratio: 2.48; border: 1px solid #73bdff; border-radius: 8px; background: #0b1734; }
-.detail-art img { width: 100%; height: 100%; object-fit: cover; }
-.preview-badge { align-self: flex-start; padding: 4px 10px; border: 1px solid var(--ice-rim); border-radius: 3px; background: var(--badge); color: var(--ice); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-.detail-meta { display: grid; border: 1px solid #4f86be; border-radius: 8px; background: #172a50; }
-.detail-meta div { display: flex; justify-content: space-between; gap: 10px; padding: 12px 14px; border-bottom: 1px solid #4873a4; }
-.detail-meta div:last-child { border-bottom: 0; }
-.detail-meta dt { color: var(--mist); }
-.detail-meta dd { margin: 0; font-family: "Geist Mono", ui-monospace, monospace; font-weight: 600; }
-.detail-note { margin: 0; color: var(--mist); line-height: 1.45; }
-.detail-view .primary-button { align-self: stretch; min-height: 42px; }
+.detail-view { padding: 0; gap: 0; }
+.detail-subhead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+  min-height: 52px;
+  padding: 8px 12px;
+  background: #151a30;
+}
+.icon-back {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 4px;
+  color: var(--ice);
+  background: var(--pit);
+}
+.icon-back svg { width: 18px; height: 18px; }
+.icon-back:hover { color: var(--paper); }
+.detail-titles { min-width: 0; flex: 1; }
+.detail-titles h1 {
+  margin: 0;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail-titles span {
+  color: var(--mist);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.preview-badge {
+  flex: none;
+  padding: 4px 8px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--badge);
+  color: var(--ice);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.detail-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 715 / 380;
+  background: #080d22;
+}
+.detail-stage img { width: 100%; height: 100%; object-fit: cover; }
+.detail-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #11162c55 0%, transparent 28%, #11162ccc 100%);
+  pointer-events: none;
+}
+.stage-chip {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #122653c7;
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.dealer-plate {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #195d9ad9;
+  font-size: 13px;
+  font-weight: 700;
+}
+.dealer-plate em {
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: #14284db3;
+  color: var(--mist);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+}
+.detail-stage .hero-edge { position: absolute; right: 0; bottom: 0; left: 0; }
+.preview-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px 12px 20px;
+}
+.info-card, .shoe-card {
+  display: grid;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--pit);
+}
+.info-card { grid-template-columns: 1fr 1fr; }
+.info-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  border-radius: 4px;
+  background: #151a30b3;
+}
+.info-card dt { color: var(--mist); font-size: 11px; }
+.info-card dd { margin: 0; font-family: "Geist Mono", ui-monospace, monospace; font-size: 12px; font-weight: 600; }
+.shoe-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.shoe-head h2 { margin: 0; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.shoe-head span { display: block; color: var(--mist); font-family: "Geist Mono", ui-monospace, monospace; font-size: 10px; }
+.shoe-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3px;
+  aspect-ratio: 12 / 5;
+  padding: 6px;
+  border-radius: 4px;
+  background: #080d22;
+}
+.road-dot.labeled {
+  display: grid;
+  width: 86%;
+  place-items: center;
+  color: var(--paper);
+  font-family: "Geist Mono", ui-monospace, monospace;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 700;
+}
+.road-dot.labeled.tie { color: var(--enter-ink); }
+.detail-note { margin: 0; color: var(--mist); font-size: 12px; line-height: 1.45; }
+.detail-view .primary-button { align-self: stretch; min-height: 44px; }
 
 .modal {
   width: min(92vw, 490px);

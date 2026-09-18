@@ -21,5 +21,48 @@
     "folder": "lobby",
     "code_ok": true,
     "img_ok": true
+  },
+  {
+    "title": "Circular portrait avatar of an elegant friendly live dealer woman...",
+    "folder": "dealer-avatar",
+    "screenId": "180e0825e1054f1f93351bccd6bc0b62",
+    "code_ok": false,
+    "img_ok": true,
+    "note": "Image asset only; Stitch returned no HTML."
+  },
+  {
+    "title": "Table Preview - Baccarat Speed A104",
+    "folder": "table-preview-a104",
+    "screenId": "a01a07a7309347979352d75be87c573b",
+    "code_ok": true,
+    "img_ok": true
+  },
+  {
+    "title": "Blackjack Tables - Category View",
+    "folder": "blackjack-tables",
+    "screenId": "bc63871b0a3e447998450e8ea31f42ca",
+    "code_ok": true,
+    "img_ok": true
+  },
+  {
+    "title": "Roulette Tables - Category View",
+    "folder": "roulette-tables",
+    "screenId": "a4e6f2ceea664708b6c13f3f5b525d97",
+    "code_ok": true,
+    "img_ok": true
+  },
+  {
+    "title": "Sic Bo Tables - Category View",
+    "folder": "sic-bo-tables",
+    "screenId": "d2bacc24bb354f00a8ef0ec556f38aac",
+    "code_ok": true,
+    "img_ok": true
+  },
+  {
+    "title": "Speed Frenzy Tables - Category View",
+    "folder": "speed-frenzy-tables",
+    "screenId": "2001ad7820bc406890f8b1763e56305a",
+    "code_ok": true,
+    "img_ok": true
   }
 ]
